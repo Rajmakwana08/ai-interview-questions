@@ -574,14 +574,144 @@ AI Winter → Low funding & low interest period
       `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 11,
+      question: "11. What is Heuristic Search? Explain Heuristic Function (h(n)).",
       answer: "",
-      codeExample: ``
+      codeExample: `
+⭐ What is Heuristic Search?
+
+🔹 Meaning
+
+Heuristic Search is a search technique in AI that uses extra knowledge (rules of thumb) to find a solution 
+faster.
+
+👉 Instead of trying all paths, it chooses the best-looking path first.
+
+📌 In simple words:
+Heuristic search = Smart search
+
+
+🔹 Why Heuristic Search is needed?
+
+Normal search is slow
+Heuristic search:
+  Saves time
+  Reduces search space
+  Finds solution faster
+
+🔹 Example
+
+Finding a route on Google Maps:
+It does not try all roads — it selects the shortest or fastest path.
+
+
+
+
+⭐ Heuristic Function (h(n))
+
+🔹 Meaning
+
+A Heuristic Function, written as h(n), is a function that estimates how close a state (n) is to the goal.
+
+➡️ A heuristic function in AI is a rule that gives an estimated score of how close you are to the goal from 
+a current state, helping the AI choose the best next step without checking everything.
+
+
+📌 In simple words:
+h(n) tells how far we are from the goal
+
+
+🔹 Role of Heuristic Function
+
+The heuristic function helps AI to:
+  Decide which node to explore next
+  Choose the most promising path
+  Improve search efficiency
+
+👉 Smaller value of h(n) = closer to goal
+
+
+
+🔹 Example of h(n)
+
+📍 Path Finding Example
+
+  Problem: Reach destination city
+  h(n) = Straight-line distance to destination
+
+City A ---- City B ---- City C (Goal)
+
+h(A) = 20 km
+h(B) = 10 km
+h(C) = 0 km
+
+
+📍 Example (Path finding)
+
+Imagine you want to travel from City A to the Goal City C:
+  h(A) = 20 km — straight-line guess from City A to City C
+  h(B) = 10 km — straight-line guess from City B to City C
+  h(C) = 0 km — because City C is the goal itself
+
+Even though City C has the best value (0), the AI can’t go there directly from City A if there is no direct road. 
+So it looks at the reachable next cities (like B), compares their heuristic values, and picks the one with the 
+smallest h(n). In this case, that’s City B (10 km), because it’s estimated to be closer to the goal than A.
+
+
+
+🔹 Another Simple Example
+
+In 8-puzzle problem:
+
+  h(n) = Number of misplaced tiles
+  Goal state → h(n) = 0
+
+
+
+
+⭐ One-Line Exam Answers (Very Important)
+
+Heuristic Search:
+  A search technique that uses heuristic information to find solutions efficiently.
+
+Heuristic Function (h(n)):
+  A function that estimates the cost from current state to the goal state.
+
+
+🧠 Memory Trick
+
+h(n) = how near to goal
+      
+
+
+⭐ Difference between Heuristic Search and Heuristic Function (h(n))
+
+| Heuristic Search                    | Heuristic Function (h(n))          |
+| ----------------------------------- | ---------------------------------- |
+| It is a search technique            | It is a function (formula)         |
+| Used to find solution faster        | Used to guide the search           |
+| It decides which path to follow     | It estimates how close to goal     |
+| Uses heuristic information          | Provides heuristic information     |
+| Works on many nodes and paths       | Gives value for one node           |
+| Example: Best First Search          | Example: Straight-line distance    |
+
+
+
+⭐ One-line Easy Summary (Exam Use)
+
+Heuristic Search uses smart rules to search efficiently
+Heuristic Function (h(n)) gives an estimate of distance to the goal
+
+
+🧠 Memory Tip
+
+Search = Process
+Function = Value
+      `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 12,
+      question: "12. Explain Generate and Test Algorithm with example.",
       answer: "",
       codeExample: ``
     },

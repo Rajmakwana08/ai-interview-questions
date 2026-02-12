@@ -707,37 +707,544 @@ Heuristic Function (h(n)) gives an estimate of distance to the goal
 
 Search = Process
 Function = Value
+
+
+
+Type of Heuristic Search:
+
+All are varieties of Heuristic Search:
+
+
+Generate and test
+Hill Climbing
+Best First Search
+Problem Reduction
+Constraint Satisfaction
+Means-ends analysis
+
+
+
       `
     },
     {
       id: 12,
       question: "12. Explain Generate and Test Algorithm with example.",
       answer: "",
-      codeExample: ``
+      codeExample: `
+⭐ Generate and Test Algorithm
+
+🔹 Meaning
+
+Generate and Test is a problem-solving algorithm in AI where:
+
+👉 The system
+
+1. Generates a possible solution
+2. Tests whether it solves the problem
+3. Repeats until a correct solution is found
+
+📌 In simple words:
+Try → Check → Repeat
+
+
+🔹 Simple Steps of Generate and Test Algorithm
+
+1️⃣ Generate a possible solution
+2️⃣ Test whether it is correct
+3️⃣ If correct → Stop
+4️⃣ If not correct → Generate another solution
+5️⃣ Repeat until solution is found or all options are tried
+
+
+
+🔹 ASCII Diagram (Easy to Draw in Exam)
+
++--------------------+
+| Generate Solution  |
++--------------------+
+           |
+           v
++--------------------+
+| Test Solution ?    |
++--------------------+
+     |         |
+   Yes        No
+     |         |
+     v         v
++-----------+  +--------------------+
+| Solution  |  | Generate Next One  |
+| Found     |  +--------------------+
++-----------+           |
+                         |
+                         +----> (Back to Test)
+
+
+
+
+🔹 Example of Generate and Test
+
+🔸 Example: Finding a Number
+
+Problem: Find a number whose square is 25
+
+Steps:
+
+Generate 1 → Test → 1² = 1 ❌
+Generate 3 → Test → 3² = 9 ❌
+Generate 5 → Test → 5² = 25 ✅
+
+👉 Solution found: 5
+
+
+
+🔹 Another AI Example
+
+8-Puzzle Problem
+  Generate a board arrangement
+  Test if it matches goal state
+  Repeat until goal is reached
+
+
+🔹 Advantages
+
+Simple to understand
+Easy to implement
+
+
+🔹 Disadvantages
+
+Slow for large problems
+Tries many wrong solutions
+
+
+⭐ One-Line Exam Answer
+
+Generate and Test algorithm generates possible solutions and tests each one until a correct solution is 
+found.
+
+
+
+🧠 Memory Trick
+
+Generate → Test → Repeat
+      
+      `
     },
     {
-      id: 1,
-      question: "1. ",
-      answer: "",
-      codeExample: ``
+      id: 13,
+      question: "13. Explain Hill Climbing Algorithm.",
+      answer: "👉 EXAM FAVORITE",
+      codeExample: `
+⭐ Hill Climbing Algorithm
+
+🔹 Meaning
+
+Hill Climbing is a heuristic search technique that:
+
+👉 Starts from an initial state
+👉 Moves to the neighbor with better value
+👉 Continues until no better state is found
+
+
+📌 In simple words:
+Always move upward toward better solution
+
+
+
+🔹 Why called Hill Climbing?
+
+Imagine you are climbing a hill ⛰
+You always move upward, never downward.
+
+
+🔹 Basic Steps of Hill Climbing
+
+1️⃣ Start from initial state
+2️⃣ Generate neighboring states
+3️⃣ Select the best neighbor
+4️⃣ If better than current → move there
+5️⃣ Repeat until goal is reached or no better neighbor exists
+
+
+
+⭐ Types of Hill Climbing
+
+1️⃣ Simple Hill Climbing
+
+👉 Checks neighbors one by one
+👉 Moves to the first better state found
+
+Characteristics:
+
+Fast
+Does not check all neighbors
+May miss best solution
+
+📌 Simple but not optimal
+
+
+
+2️⃣ Steepest Ascent Hill Climbing
+
+👉 Checks all neighbors first
+👉 Selects the best among all
+
+Characteristics:
+
+Better than simple version
+More accurate
+Slower than simple hill climbing
+
+📌 Also called Best Improvement
+
+
+⭐ Diagram (Easy to Draw in Exam)
+        Goal
+         /\\
+        /  \\        ← Global Maximum
+       /    \\
+      /      \\
+     /\\              ← Local Maximum
+    /  \\
+   /    \\
+ Start
+
+
+AI tries to climb up,
+but may stop at local maximum instead of global maximum.
+
+
+
+⭐ Problems in Hill Climbing ⭐⭐
+
+1️⃣ Local Maximum
+
+👉 A point where all neighbors are lower
+👉 But it is NOT the highest solution
+
+📌 AI stops early thinking it reached goal
+
+
+2️⃣ Plateau
+
+👉 Flat area where all neighbors have same value
+👉 No direction to move
+
+📌 AI gets stuck
+
+
+3️⃣ Ridge (Extra for exam safety)
+
+👉 Narrow path with higher values
+👉 Algorithm moves slowly or fails
+
+
+
+⭐ Advantages
+
+✔ Simple
+✔ Uses less memory
+✔ Fast in small problems
+
+
+⭐ Disadvantages
+
+❌ Can get stuck in local maxima
+❌ Not guaranteed to find global solution
+❌ Cannot backtrack
+
+
+⭐ One-Line Exam Definition
+
+Hill Climbing is a heuristic search algorithm that continuously moves towards increasing value states until 
+no better state is available.
+
+
+🧠 Memory Trick
+
+Hill Climbing =
+Move Up Only 🚀
+No Backtracking ❌
+      `
     },
     {
-      id: 1,
-      question: "1. ",
-      answer: "",
-      codeExample: ``
+      id: 14,
+      question: "14. Explain Best First Search Algorithm.",
+      answer: "📌 High probability long answer",
+      codeExample: `
+⭐ Best First Search Algorithm
+
+🔹 Meaning
+
+Best First Search is a search algorithm that:
+
+👉 Selects the best node first
+👉 Uses heuristic function h(n) to decide
+👉 Moves toward goal faster
+
+📌 In simple words:
+Always choose the most promising path first
+
+
+
+🔹 Why use Best First Search?
+
+Normal search checks many nodes.
+Best First Search checks only best-looking nodes using heuristic value.
+
+👉 Saves time
+👉 Reduces search space
+
+
+⭐ Working of Best First Search
+
+Steps:
+
+1️⃣ Start from initial node
+2️⃣ Put node in OPEN list
+3️⃣ Select node with lowest heuristic value h(n)
+4️⃣ Expand that node (generate children)
+5️⃣ Add children to OPEN list
+6️⃣ Repeat until goal is found
+
+
+
+⭐ Role of Heuristic Function (h(n))
+
+👉 h(n) = Estimated distance from node to goal
+
+✔ Smaller h(n) → closer to goal
+✔ Larger h(n) → farther from goal
+
+📌 Algorithm always selects node with smallest h(n)
+
+
+
+⭐ Example
+
+Suppose we want to reach Goal node G
+
+| Node | h(n) |
+| ---- | ---- |
+| A    | 10   |
+| B    | 6    |
+| C    | 3    |
+| G    | 0    |
+
+
+👉 Algorithm chooses:
+
+Start → C → G
+(because smallest h(n))
+
+
+⭐ Simple Diagram (ASCII)
+
+        Start
+       /  |  \\
+      A   B   C
+    h=10 h=6 h=3
+              |
+              G
+            h=0
+
+
+Algorithm selects C first → then Goal.
+
+
+⭐ Advantages
+
+✔ Fast search
+✔ Efficient for large problems
+✔ Uses heuristic knowledge
+
+
+⭐ Disadvantages
+
+❌ May not give optimal solution
+❌ Depends on heuristic accuracy
+
+
+
+⭐ One-Line Exam Answer
+
+Best First Search is a heuristic search algorithm that selects the node with the lowest heuristic value to 
+reach the goal faster.
+
+
+🧠 Memory Trick
+
+Best First = Choose Best h(n) First
+      
+      `
     },
     {
-      id: 1,
-      question: "1. ",
-      answer: "",
-      codeExample: ``
+      id: 15,
+      question: "15. Explain A (A Star) Algorithm*. Evaluation function: f(n) = g(n) + h(n) ⭐⭐⭐, Why A* is optimal",
+      answer: "👉 MOST IMPORTANT QUESTION OF THIS UNIT 🔥🔥",
+      codeExample: `
+⭐ A* (A Star) Algorithm
+
+
+🔹 Meaning
+
+A* is a best-first search algorithm that finds the shortest path to the goal.
+
+👉 It combines:
+
+Actual cost from start → g(n)
+Estimated cost to goal → h(n)
+
+📌 In simple words:
+A* = Smart + Accurate Path Finder
+
+
+
+⭐ Evaluation Function
+
+The main formula of A* is:
+
+          f(n)=g(n)+h(n)
+
+
+
+🔹 What each term means?
+
+1️⃣ g(n)
+
+Actual cost from start node to current node
+
+👉 Real distance travelled
+
+
+2️⃣ h(n)
+
+Heuristic cost (estimated distance from current node to goal)
+
+👉 Estimated remaining distance
+
+
+3️⃣ f(n)
+
+Total estimated cost of solution path
+
+👉 A* selects node with smallest f(n)
+
+
+⭐ Working of A* Algorithm
+Steps:
+
+1️⃣ Start from initial node
+2️⃣ Calculate f(n) = g(n) + h(n)
+3️⃣ Select node with lowest f(n)
+4️⃣ Expand it
+5️⃣ Repeat until goal is reached
+
+
+⭐ Example
+
+Suppose we want to reach Goal (G)
+
+| Node | g(n) | h(n) | f(n) = g+h |
+| ---- | ---- | ---- | ---------- |
+| A    | 1    | 6    | 7          |
+| B    | 3    | 4    | 7          |
+| C    | 2    | 2    | 4          |
+| G    | 4    | 0    | 4          |
+
+
+👉 Node with smallest f(n) = C
+Then → G
+
+So A* finds shortest path.
+
+
+
+⭐ Simple Diagram
+
+Start
+  |
+  A (g=1, h=6, f=7)
+  |
+  C (g=2, h=2, f=4)
+  |
+  G (g=4, h=0, f=4)
+
+
+A* chooses lowest f(n) every time.
+
+
+
+⭐ Why A* is Optimal ⭐⭐⭐
+
+A* gives optimal (shortest) solution if:
+
+👉 The heuristic function h(n) is admissible
+
+
+🔹 What is Admissible Heuristic?
+
+A heuristic is admissible if:
+
+        h(n)≤actualcosttogoal
+
+👉 It never overestimates the real cost.
+
+
+
+Why this makes A* optimal?
+
+Because:
+
+It considers real cost g(n)
+It considers estimated cost h(n)
+It never ignores cheaper path
+It guarantees shortest path if heuristic is correct
+
+
+⭐ Advantages
+
+✔ Finds shortest path
+✔ More accurate than Best First Search
+✔ Complete and optimal (with admissible h(n))
+
+
+⭐ Disadvantages
+
+❌ Uses more memory
+❌ Slower than simple heuristic methods
+
+
+
+⭐ One-Line Exam Answer
+
+A* is a heuristic search algorithm that uses evaluation function f(n) = g(n) + h(n) to find the optimal path 
+to the goal.
+
+
+
+🧠 Memory Trick
+
+A* =
+Actual cost + Heuristic cost
+g(n) + h(n)
+      
+      `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 16,
+      question: "16. 🧠 JUST-REMEMBER POINTS (MCQ / 2 MARKS)",
       answer: "",
-      codeExample: ``
+      codeExample: `
+Heuristic means → Rule of thumb
+
+h(n) → Estimated cost to goal
+g(n) → Cost from start to node
+A* uses → Best First Search + cost
+Hill climbing is a → Local search technique
+Local maxima → Algorithm gets stuck
+      
+      `
     },
     {
       id: 1,

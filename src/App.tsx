@@ -1266,7 +1266,7 @@ Local maxima → Algorithm gets stuck
     },
     {
       id: 1,
-      question: "1. ",
+      question: "",
       answer: "",
       codeExample: ``
     },

@@ -1307,16 +1307,397 @@ Local maxima → Algorithm gets stuck
       codeExample: ``
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 1111,
+      question: "1. Write a program to implement Tic Tac Toe game.",
       answer: "",
-      codeExample: ``
+      codeExample: `
+# Tic Tac Toe Player vs AI (Minimax AI)
+
+import math
+
+# Create board
+board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+]
+
+PLAYER = 'X'
+AI = 'O'
+
+
+# Print board
+def print_board():
+    print("-------------")
+    for i in range(3):
+        print("|", board[i][0], "|", board[i][1], "|", board[i][2], "|")
+        print("-------------")
+
+
+# Check winner
+def check_winner(player):
+
+    # Rows
+    for i in range(3):
+        if board[i][0] == board[i][1] == board[i][2] == player:
+            return True
+
+    # Columns
+    for j in range(3):
+        if board[0][j] == board[1][j] == board[2][j] == player:
+            return True
+
+    # Diagonals
+    if board[0][0] == board[1][1] == board[2][2] == player:
+        return True
+
+    if board[0][2] == board[1][1] == board[2][0] == player:
+        return True
+
+    return False
+
+
+# Check draw
+def is_full():
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == ' ':
+                return False
+    return True
+
+
+# Minimax Algorithm
+def minimax(is_max):
+
+    # If AI wins → +1
+    if check_winner(AI):
+        return 1
+
+    # If Player wins → -1
+    if check_winner(PLAYER):
+        return -1
+
+    # Draw → 0
+    if is_full():
+        return 0
+
+    if is_max:  # AI turn (maximize score)
+        best = -math.inf
+
+        for i in range(3):
+            for j in range(3):
+                if board[i][j] == ' ':
+                    board[i][j] = AI
+                    score = minimax(False)
+                    board[i][j] = ' '
+                    best = max(best, score)
+
+        return best
+
+    else:  # Player turn (minimize score)
+        best = math.inf
+
+        for i in range(3):
+            for j in range(3):
+                if board[i][j] == ' ':
+                    board[i][j] = PLAYER
+                    score = minimax(True)
+                    board[i][j] = ' '
+                    best = min(best, score)
+
+        return best
+
+
+# AI Move
+def ai_move():
+
+    best_score = -math.inf
+    move = (0, 0)
+
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == ' ':
+                board[i][j] = AI
+                score = minimax(False)
+                board[i][j] = ' '
+
+                if score > best_score:
+                    best_score = score
+                    move = (i, j)
+
+    board[move[0]][move[1]] = AI
+
+
+# Game Loop
+while True:
+
+    print_board()
+
+    # Player Move
+    row = int(input("Enter row (0-2): "))
+    col = int(input("Enter column (0-2): "))
+
+    if board[row][col] != ' ':
+        print("Invalid Move")
+        continue
+
+    board[row][col] = PLAYER
+
+    if check_winner(PLAYER):
+        print_board()
+        print("🎉 You Win!")
+        break
+
+    if is_full():
+        print_board()
+        print("Game Draw")
+        break
+
+    # AI Move
+    print("AI is thinking...")
+    ai_move()
+
+    if check_winner(AI):
+        print_board()
+        print("AI Wins 🤖")
+        break
+
+    if is_full():
+        print_board()
+        print("Game Draw")
+        break
+
+
+
+OUTPUT:
+
+-------------
+|   |   |   |    
+-------------    
+|   |   |   |    
+-------------    
+|   |   |   |    
+-------------    
+Enter row (0-2): 1
+Enter column (0-2): 1
+AI is thinking...
+-------------
+| O |   |   |
+-------------
+|   | X |   |
+-------------
+|   |   |   |
+-------------
+Enter row (0-2): 
+
+
+
+
+------------------------------------------------------------------------
+
+
+if you not used AI only two User are perform to used this code:
+
+
+# Tic Tac Toe - 2 Player
+
+# Create board
+board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+]
+
+# Print board
+def print_board():
+    print("-------------")
+    for i in range(3):
+        print("|", board[i][0], "|", board[i][1], "|", board[i][2], "|")
+        print("-------------")
+
+# Check winner
+def check_winner(player):
+
+    # Rows
+    for i in range(3):
+        if board[i][0] == board[i][1] == board[i][2] == player:
+            return True
+
+    # Columns
+    for j in range(3):
+        if board[0][j] == board[1][j] == board[2][j] == player:
+            return True
+
+    # Diagonals
+    if board[0][0] == board[1][1] == board[2][2] == player:
+        return True
+
+    if board[0][2] == board[1][1] == board[2][0] == player:
+        return True
+
+    return False
+
+# Check draw
+def is_full():
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == ' ':
+                return False
+    return True
+
+
+# Game Loop (2 Players)
+current_player = 'X'
+
+while True:
+
+    print_board()
+    print("Player", current_player, "turn")
+
+    row = int(input("Enter row (0-2): "))
+    col = int(input("Enter column (0-2): "))
+
+    if board[row][col] != ' ':
+        print("Invalid Move")
+        continue
+
+    board[row][col] = current_player
+
+    if check_winner(current_player):
+        print_board()
+        print("🎉 Player", current_player, "Wins!")
+        break
+
+    if is_full():
+        print_board()
+        print("Game Draw")
+        break
+
+    # Switch player
+    if current_player == 'X':
+        current_player = 'O'
+    else:
+        current_player = 'X'
+
+
+
+OUTPUT:
+
+-------------
+|   |   |   |
+-------------
+|   |   |   |
+-------------
+|   |   |   |
+-------------
+
+Player X turn
+Enter row (0-2): 0 
+Enter column (0-2): 1
+-------------
+|   | X |   |
+-------------
+|   |   |   |
+-------------
+|   |   |   |
+-------------
+
+Player O turn
+Enter row (0-2): 1
+Enter column (0-2): 1
+-------------
+|   | X |   |
+-------------
+|   | O |   |
+-------------
+|   |   |   |
+-------------
+
+Player X turn
+      `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 2.2,
+      question: "2. Write a program to implement BFS 8 Puzzle problem.",
       answer: "",
-      codeExample: ``
+      codeExample: `
+n = int(input("Enter value of n: "))
+
+board = [[0 for i in range(n)] for j in range(n)]
+
+
+def printBoard():
+    for row in board:
+        print(*row)
+
+
+def isSafe(row, col):
+
+    # Check column
+    for i in range(row):
+        if board[i][col] == 1:
+            return False
+
+    # Check upper left diagonal
+    i = row - 1
+    j = col - 1
+    while i >= 0 and j >= 0:
+        if board[i][j] == 1:
+            return False
+        i -= 1
+        j -= 1
+
+    # Check upper right diagonal
+    i = row - 1
+    j = col + 1
+    while i >= 0 and j < n:
+        if board[i][j] == 1:
+            return False
+        i -= 1
+        j += 1
+
+    return True
+
+
+def solve(row):
+    if row == n:
+        return True
+
+    for col in range(n):
+
+        if isSafe(row, col):
+            board[row][col] = 1
+
+            if solve(row + 1):
+                return True
+
+            board[row][col] = 0   # Backtrack
+
+    return False
+
+
+# Run
+if solve(0):
+    printBoard()
+else:
+    print("No Solution")
+
+
+
+OUTPUT:
+
+Enter value of n: 4
+0 1 0 0
+0 0 0 1
+0 0 0 1
+1 0 0 0
+0 0 1 0
+
+
+
+Enter value of n: 3
+No Solution
+      `
     },
     {
       id: 1,

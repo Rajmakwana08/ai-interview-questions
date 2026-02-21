@@ -1621,6 +1621,15 @@ Player X turn
       question: "2. Write a program to implement BFS 8 Puzzle problem.",
       answer: "",
       codeExample: `
+
+      
+      `
+    },
+    {
+      id: 2.2,
+      question: "2. Write a program to implement BFS 8 Puzzle problem.",
+      answer: "",
+      codeExample: `
 n = int(input("Enter value of n: "))
 
 board = [[0 for i in range(n)] for j in range(n)]

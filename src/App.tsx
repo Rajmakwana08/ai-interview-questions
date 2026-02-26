@@ -1621,13 +1621,179 @@ Player X turn
       question: "2. Write a program to implement BFS 8 Puzzle problem.",
       answer: "",
       codeExample: `
+from collections import deque
+
+goal = (1,2,3,4,5,6,7,8,0)
+
+def print_grid(state):
+    for i in range(0, 9, 3):
+        print(state[i:i+3]) 
+    print()
+
+
+def bfs(start):
+    q = deque([(start, start.index(0), [])])
+    visited = set()
+
+    while q:
+        state, blank, path = q.popleft()
+
+        if state == goal:
+            return path + [state]
+
+        if state in visited:
+            continue
+        visited.add(state)
+
+        moves = []
+        r, c = divmod(blank, 3)
+
+        if r > 0: moves.append(blank - 3)   # Up
+        if r < 2: moves.append(blank + 3)   # Down
+        if c > 0: moves.append(blank - 1)   # Left
+        if c < 2: moves.append(blank + 1)   # Right
+
+        for m in moves:
+            new = list(state)
+            new[blank], new[m] = new[m], new[blank]
+            q.append((tuple(new), m, path + [state]))
+
+    return None
+
+
+# Example start state
+start = (1,2,3,
+         4,0,6,
+         7,5,8)
+
+solution = bfs(start)
+
+if solution:
+    for step in solution:
+        print_grid(step)
+else:
+    print("No solution found.")
+
+
+
+OUTPUT:
+
+(1, 2, 3)
+(4, 0, 6)
+(7, 5, 8)
+
+(1, 2, 3)
+(4, 5, 6)
+(7, 0, 8)
+
+(1, 2, 3)
+(4, 5, 6)
+(7, 8, 0)
 
       
       `
     },
     {
-      id: 2.2,
-      question: "2. Write a program to implement BFS 8 Puzzle problem.",
+      id: 3.3,
+      question: "3. Write a program to implement DFS Water Jug Problem.",
+      answer: "",
+      codeExample: `
+def water_jug_manual():
+    cap1 = int(input("Enter capacity of Jug 1: "))
+    cap2 = int(input("Enter capacity of Jug 2: "))
+
+    print("Enter target amounts for both jugs:")
+    target1 = int(input("Target for Jug 1: "))
+    target2 = int(input("Target for Jug 2: "))
+
+    x, y = 0, 0   # Initial state
+
+    while True:
+        print("\nCurrent State: ({}, {})".format(x, y))
+
+        # Check if BOTH targets reached
+        if x == target1 and y == target2:
+            print("Congratulations! You reached the target state.")
+            break
+
+        print("\nChoose an operation:")
+        print("1. Fill Jug 1")
+        print("2. Fill Jug 2")
+        print("3. Empty Jug 1")
+        print("4. Empty Jug 2")
+        print("5. Pour Jug 1 -> Jug 2")
+        print("6. Pour Jug 2 -> Jug 1")
+        print("7. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            x = cap1
+        elif choice == 2:
+            y = cap2
+        elif choice == 3:
+            x = 0
+        elif choice == 4:
+            y = 0
+        elif choice == 5:
+            transfer = min(x, cap2 - y)
+            x -= transfer
+            y += transfer
+        elif choice == 6:
+            transfer = min(y, cap1 - x)
+            y -= transfer
+            x += transfer
+        elif choice == 7:
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+# Run program
+water_jug_manual()
+
+
+
+OUTPUT:
+
+Enter capacity of Jug 1: 5
+Enter capacity of Jug 2: 3
+Enter target amounts for both jugs:
+Target for Jug 1: 3
+Target for Jug 2: 0
+
+Current State: (0, 0)
+
+Choose an operation:
+1. Fill Jug 1
+2. Fill Jug 2
+3. Empty Jug 1
+4. Empty Jug 2
+5. Pour Jug 1 -> Jug 2
+6. Pour Jug 2 -> Jug 1
+7. Exit
+Enter your choice: 2
+
+Current State: (0, 3)
+
+Choose an operation:
+1. Fill Jug 1
+2. Fill Jug 2
+3. Empty Jug 1
+4. Empty Jug 2
+5. Pour Jug 1 -> Jug 2
+6. Pour Jug 2 -> Jug 1
+7. Exit
+Enter your choice: 6
+
+Current State: (3, 0)
+Congratulations! You reached the target state.
+      
+      `
+    },
+    {
+      id: 4.4,
+      question: "4. Write a program to implement N Queens Problem.",
       answer: "",
       codeExample: `
 n = int(input("Enter value of n: "))

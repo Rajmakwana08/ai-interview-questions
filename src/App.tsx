@@ -1247,34 +1247,2557 @@ Local maxima → Algorithm gets stuck
       `
     },
     {
-      id: 1,
-      question: "1. ",
-      answer: "",
-      codeExample: ``
+      id: 21,
+      question: "21.What is a Production System in Artificial Intelligence? ",
+      answer: "📌 Very common theory question.",
+      codeExample: `
+⭐ Production System in Artificial Intelligence
+
+1️⃣ Definition
+
+A Production System is a problem-solving method used in Artificial Intelligence.
+It uses a set of rules to decide what action to take in a given situation.
+
+📌 In simple words:
+
+A Production System solves problems using IF–THEN rules.
+
+
+⭐ Basic Idea
+
+The system checks the current situation and applies a rule to perform an action.
+
+Example rule:
+
+IF temperature > 40
+THEN turn on fan
+
+Here:
+
+Condition → temperature > 40
+Action → turn on fan
+
+
+
+⭐ Structure of Production System
+
+A Production System has three main components.
+
+
+1️⃣ Rule Base (Production Rules)
+
+Collection of IF–THEN rules.
+
+Example:
+
+Rule 1:
+IF student_marks > 40
+THEN result = Pass
+
+
+2️⃣ Working Memory
+
+Stores the current state or facts.
+
+Example:
+
+student_marks = 75
+
+
+3️⃣ Control Strategy
+
+Decides which rule should be applied when multiple rules match.
+It manages the execution of rules.
+
+
+
+⭐ IF–THEN Rule Concept
+
+Production systems work using IF–THEN rules.
+
+Structure:
+
+IF condition
+THEN action
+
+Example:
+
+IF it is raining
+THEN take umbrella
+
+So the system checks the condition and performs the action.
+
+
+⭐ Situation → Action Representation
+
+Production systems represent knowledge as:
+
+Situation → Action
+
+
+Meaning:
+
+Current Situation  →  Action to perform
+
+
+Example:
+
+Situation: hungry
+Action: eat food
+
+
+Another example:
+
+Situation: traffic signal = red
+Action: stop vehicle
+
+
+⭐ Simple Diagram
+
+          Production System
+                |
+     -------------------------
+     |         |             |
+ Rule Base  Working Memory  Control Strategy
+ (IF–THEN)     (Facts)       (Rule Selection)
+
+
+⭐ Example of Production System
+
+Problem: Determine if student passes.
+
+Rules:
+
+Rule 1:
+IF marks ≥ 40
+THEN result = Pass
+
+Rule 2:
+IF marks < 40
+THEN result = Fail
+
+
+Working Memory:
+
+marks = 55
+
+System applies Rule 1 → Result = Pass.
+
+
+⭐ Advantages
+
+1️⃣ Easy to understand
+2️⃣ Knowledge represented in rules
+3️⃣ Flexible problem solving
+
+
+⭐ One-Line Exam Answer
+
+A Production System in Artificial Intelligence is a rule-based system that uses IF–THEN rules to represent 
+knowledge and perform actions based on the current situation.
+      
+      `
     },
     {
-      id: 1,
-      question: "1. ",
-      answer: "",
-      codeExample: ``
+      id: 22,
+      question: "22. Components of Production System",
+      answer: "This is the main long answer.",
+      codeExample: `
+⭐ Components of Production System
+
+The three main components are:
+
+1️⃣ Global Database
+2️⃣ Production Rules
+3️⃣ Control System
+
+⭐ 1️⃣ Global Database
+Meaning
+
+Global Database stores the current information or facts about the problem.
+It is also called Working Memory.
+
+
+📌 In simple words:
+
+It contains the current state of the system.
+
+
+Example
+
+Suppose we check student result.
+
+Global Database stores:
+
+    marks = 70
+
+The system uses this information to apply rules.
+
+
+Real Life Example
+
+    Situation : Traffic signal = RED
+
+This information is stored in Global Database.
+
+
+
+⭐ 2️⃣ Production Rules
+Meaning
+
+Production Rules are IF–THEN rules that define actions.
+
+📌 In simple words:
+
+Production rules tell the system what action to take.
+
+
+Structure
+
+IF condition
+THEN action
+
+
+Example
+
+Rule 1:
+IF marks ≥ 40
+THEN result = PASS
+
+
+Rule 2:
+IF marks < 40
+THEN result = FAIL
+
+The system checks global database facts and applies the rule.
+
+
+
+⭐ 3️⃣ Control System
+Meaning
+
+Control System decides which rule should be applied.
+Sometimes many rules match the situation.
+So the control system selects the correct rule.
+
+
+📌 In simple words:
+
+Control system manages the execution of rules.
+
+Example
+
+Suppose rules are:
+
+Rule 1: IF marks ≥ 40 → PASS
+Rule 2: IF marks ≥ 60 → FIRST CLASS
+
+
+Global database:
+
+marks = 70
+
+Output: PASS
+
+Note: is not check another condition in this topic ok other ways is print both.
+
+Both rules match.
+Control system decides which rule to execute first.
+
+
+⭐ Simple Working Diagram
+
+          Production System
+                |
+      -------------------------
+      |           |           |
+ Global       Production     Control
+ Database       Rules        System
+  (Facts)      (IF–THEN)   (Rule Selection)
+
+
+⭐ Complete Example
+
+Problem: Determine student result.
+
+
+Global Database
+marks = 75
+
+Production Rules
+
+IF marks ≥ 40
+THEN PASS
+
+
+Control System
+
+Checks rule → applies rule → result = PASS.
+
+
+⭐ One-Line Exam Definition
+
+A Production System consists of Global Database (facts), Production Rules (IF–THEN rules), and 
+Control System which selects and applies the rules.
+      
+      `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 23,
+      question: "23. Characteristics of Production System",
       answer: "",
-      codeExample: ``
+      codeExample: `
+⭐ Characteristics of Production System
+
+The main characteristics are:
+
+1️⃣ Simplicity
+2️⃣ Modularity
+3️⃣ Modifiability
+4️⃣ Knowledge-Intensive
+
+
+⭐ 1️⃣ Simplicity
+Meaning
+
+Production systems are simple to understand and implement.
+The knowledge is written in IF–THEN rules, which are easy to read.
+
+Example
+
+IF temperature > 35
+THEN turn on AC
+
+Anyone can easily understand the rule.
+
+📌 So the system remains clear and simple.
+
+
+
+⭐ 2️⃣ Modularity
+Meaning
+
+Knowledge is divided into separate independent rules.
+Each rule works independently.
+
+📌 This means one rule does not affect other rules.
+
+Example
+
+Rule 1:
+IF marks ≥ 40
+THEN PASS
+
+Rule 2:
+
+IF marks ≥ 75
+THEN DISTINCTION
+
+Both rules are separate modules.
+
+
+
+⭐ 3️⃣ Modifiability
+Meaning
+
+Production systems are easy to modify or update.
+You can add, delete, or change rules without affecting the whole system.
+
+Example
+
+Old rule:
+
+IF marks ≥ 40
+THEN PASS
+
+If the rule changes, we simply update it:
+
+IF marks ≥ 35
+THEN PASS
+
+No need to change the entire system.
+
+
+
+⭐ 4️⃣ Knowledge-Intensive
+Meaning
+
+Production systems depend heavily on knowledge (rules).
+More rules = more intelligent system.
+
+📌 The system works based on expert knowledge stored as rules.
+
+
+Example
+
+Medical expert system:
+
+IF fever AND cough
+THEN possible flu
+
+Knowledge from doctors is stored as rules.
+
+
+⭐ Simple Diagram
+
+        Production System
+               |
+   --------------------------------
+   |        |         |            |
+Simplicity  Modularity  Modifiability  Knowledge-Intensive
+
+
+⭐ One-Line Exam Answer
+
+The characteristics of a production system include simplicity, modularity, modifiability, and 
+knowledge-intensive rule-based representation.
+      
+      
+      `
     },
     {
-      id: 1,
-      question: "",
-      answer: "",
-      codeExample: ``
+      id: 24,
+      question: "24. Water Jug Problem in AI",
+      answer: "📌 Most important example problem.",
+      codeExample: `
+⭐ Water Jug Problem in Artificial Intelligence
+Problem
+
+We have two jugs:
+
+Jug A = 4 liters
+Jug B = 3 liters
+
+
+Initial condition:
+
+Start State = (0,0)
+
+Meaning:
+
+Jug A = 0 liters
+Jug B = 0 liters
+
+
+Goal:
+
+Goal State = (2,0)
+
+
+Meaning:
+
+Jug A = 2 liters
+Jug B = 0 liters
+
+
+
+⭐ State Representation
+
+A state is written as:
+
+(A , B)
+
+Where:
+
+A = water in Jug A
+B = water in Jug B
+
+Example:
+
+(4,0) → Jug A full, Jug B empty
+(1,3) → Jug A has 1L, Jug B full
+
+
+
+⭐ Allowed Rules (Operations)
+
+The system can perform three types of actions.
+
+
+1️⃣ Fill Rule
+
+Fill any jug completely.
+
+Examples:
+
+Fill Jug A → (4, B)
+Fill Jug B → (A, 3)
+
+Example state change:
+
+(0,0) → (4,0)
+
+
+2️⃣ Empty Rule
+
+Empty any jug.
+
+Examples:
+
+Empty Jug A → (0, B)
+Empty Jug B → (A, 0)
+
+Example:
+
+(4,2) → (0,2)
+
+
+3️⃣ Transfer Rule
+
+Pour water from one jug to another until:
+
+    one jug becomes empty, or
+    the other jug becomes full
+
+Example:
+
+Transfer A → B
+Transfer B → A
+
+Example state:
+
+(4,0) → (1,3)
+
+because jug B can hold 3 liters.
+
+
+
+⭐ Steps to Reach Goal (2,0)
+
+Start:
+
+(0,0)
+
+
+Step 1 — Fill Jug B
+
+(0,3)
+
+
+Step 2 — Transfer B → A
+
+(3,0)
+
+
+Step 3 — Fill Jug B again
+
+(3,3)
+
+
+Step 4 — Transfer B → A until A becomes full
+
+(4,2)
+
+
+Step 5 — Empty Jug A
+
+(0,2)
+
+
+Step 6 — Transfer B → A
+
+(2,0)
+
+Goal achieved.
+
+
+
+⭐ State Diagram
+
+(0,0)
+  |
+  v
+(0,3)
+  |
+  v
+(3,0)
+  |
+  v
+(3,3)
+  |
+  v
+(4,2)
+  |
+  v
+(0,2)
+  |
+  v
+(2,0)  ← Goal
+
+
+⭐ Key Idea in AI
+
+The Water Jug problem demonstrates:
+
+State space representation
+Search techniques
+Production rules (Fill / Empty / Transfer)
+
+
+⭐ One-Line Exam Answer
+
+The Water Jug Problem is a classical AI problem where water is measured using two jugs by applying 
+operations such as fill, empty, and transfer to reach a goal state.
+      `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 25,
+      question: "25. Classes of Production System",
+      answer: "Sometimes asked as short or 5-mark question.",
+      codeExample: `
+⭐ Classes of Production System
+
+The main classes are:
+
+1️⃣ Monotonic Production System
+2️⃣ Non-Monotonic Production System
+3️⃣ Partially Commutative Production System
+4️⃣ Commutative Production System
+
+⭐ 1️⃣ Monotonic Production System
+Meaning
+
+In a monotonic system, applying a rule never prevents another rule from being applied later.
+if first condition is true then run another rule run.
+
+📌 In simple words:
+
+Rules only add new information, they do not remove previous information.
+
+Example
+
+Rule 1:
+IF A
+THEN B
+
+Rule 2:
+IF B
+THEN C
+
+If rule 1 produces B, rule 2 can still be applied later.
+So rules do not interfere with each other.
+
+
+
+⭐ 2️⃣ Non-Monotonic Production System
+Meaning
+
+In a non-monotonic system, applying a rule may prevent other rules from being applied later.
+All rules are opposite each other and also hss answer.
+
+📌 In simple words:
+
+Rules can change or remove previous facts.
+
+Example
+
+Rule 1:
+IF door_open
+THEN alarm_off
+
+Rule 2:
+IF door_closed
+THEN alarm_on
+
+When the door state changes, earlier rules may no longer be valid.
+So rules may cancel previous results.
+
+
+
+⭐ 3️⃣ Partially Commutative Production System
+Meaning
+
+In this system, some rules can be applied in any order, but not all.
+
+📌 So only certain rule orders give the same result.
+
+📌 Meaning:
+
+Certain rules depend on order
+Some rules do not depend on order
+
+Example
+
+Rule 1 → add sugar
+Rule 2 → add milk
+
+Order may not matter.
+
+But:
+
+Rule 3 → boil tea
+
+must happen before serving.
+So some rules depend on order.
+
+
+
+⭐ 4️⃣ Commutative Production System
+Meaning
+
+In a commutative system, the order of rule application does not matter.
+No matter which rule is applied first, the final result remains the same.
+
+Example
+
+Rule 1 → add salt
+Rule 2 → add spices
+
+Whether we add salt first or spices first, the final dish is the same.
+
+
+
+⭐ Simple Comparison Diagram
+
+             Production System Classes
+                      |
+      ----------------------------------------
+      |           |            |             |
+  Monotonic   Non-Monotonic  Partially     Commutative
+                               Commutative
+
+
+⭐ One-Line Exam Answer
+
+Production systems are classified into monotonic, non-monotonic, partially commutative, and 
+commutative systems based on how rules affect each other and the order in which they are applied.
+      
+      `
+    },
+    {
+      id: 31,
+      question: "31. What is Knowledge Representation in AI?",
+      answer: "📌 Basic long theory question.",
+      codeExample: `
+⭐ Knowledge Representation in Artificial Intelligence
+1️⃣ Meaning of Knowledge Representation
+
+First think about this:
+
+AI systems must store knowledge so they can think and solve problems.
+The method used to store and organize knowledge in a computer is called Knowledge Representation (KR).
+
+📌 Simple definition:
+
+Knowledge Representation is a way of storing information and knowledge in AI so that a computer system can use it to solve problems.
+
+Example
+
+Human knowledge:
+
+All humans need food
+Raj is a human
+
+
+AI system stores this knowledge so it can conclude:
+
+Raj needs food
+
+So the system represents knowledge in a logical form.
+
+
+
+⭐ 2️⃣ Why Knowledge Representation is Needed in AI
+
+AI systems need knowledge representation because they must understand situations and make decisions.
+
+Main reasons:
+
+1️⃣ To store knowledge
+
+AI systems must store facts and information.
+
+Example:
+
+Dog is an animal
+Animal can move
+
+
+2️⃣ To perform reasoning
+
+The system uses stored knowledge to make decisions.
+
+Example:
+
+If animal can move
+Dog is animal
+Therefore dog can move
+
+
+3️⃣ To solve problems
+
+Knowledge representation helps AI systems find solutions.
+
+Example:
+
+Medical diagnosis system:
+
+IF fever AND cough
+THEN possible flu
+
+
+4️⃣ To understand relationships
+
+It helps represent connections between objects.
+
+Example:
+
+Car → type of vehicle
+Vehicle → used for transport
+
+
+
+⭐ 3️⃣ Advantages in Problem Solving
+
+Knowledge representation helps AI systems solve problems more effectively.
+
+
+1️⃣ Improves decision making
+
+AI can analyze knowledge and choose the best solution.
+
+
+2️⃣ Makes reasoning possible
+
+AI can draw conclusions from stored knowledge.
+
+
+3️⃣ Reduces complexity
+
+Complex problems become easier when knowledge is organized.
+
+
+4️⃣ Reusable knowledge
+
+Stored knowledge can be used again for different problems.
+
+
+⭐ Simple Diagram
+
+Knowledge Representation
+         |
+         v
+  Store Knowledge
+         |
+         v
+  Reasoning / Thinking
+         |
+         v
+  Problem Solving
+
+
+⭐ One-Line Exam Answer
+
+Knowledge Representation in AI is the method of storing and organizing knowledge in a computer so 
+that the system can reason and solve problems.
+      `
+    },
+    {
+      id: 32,
+      question: "32. Explain Types of Knowledge in AI.",
+      answer: "📌 Very common exam question.",
+      codeExample: `
+⭐ Types of Knowledge in Artificial Intelligence
+
+AI systems store different types of knowledge to understand problems and make decisions.
+
+The main types are:
+
+1️⃣ Declarative Knowledge
+2️⃣ Procedural Knowledge
+3️⃣ Heuristic Knowledge
+4️⃣ Meta Knowledge
+5️⃣ Structural Knowledge
+
+
+⭐ 1️⃣ Declarative Knowledge
+Meaning
+
+Declarative knowledge represents facts and information about the world.
+
+It answers the question:
+
+WHAT is true?
+
+📌 This knowledge describes facts, objects, and relationships.
+
+Example
+Earth revolves around Sun
+Dog is an animal
+Water boils at 100°C
+
+These are facts, so they are declarative knowledge.
+
+
+⭐ 2️⃣ Procedural Knowledge
+Meaning
+
+Procedural knowledge describes how to perform a task or process.
+
+It answers the question:
+
+    HOW to do something?
+
+Example
+
+Steps to make tea:
+
+1. Boil water
+2. Add tea leaves
+3. Add sugar
+4. Serve tea
+
+These steps represent procedural knowledge.
+
+
+⭐ 3️⃣ Heuristic Knowledge
+Meaning
+
+Heuristic knowledge is experience-based knowledge or rules of thumb.
+It helps AI systems solve problems faster, but the solution may not always be perfect.
+
+Example
+
+Chess strategy:
+    Control the center of the board
+
+This rule helps players make better decisions.
+
+
+⭐ 4️⃣ Meta Knowledge
+Meaning
+
+Meta knowledge means knowledge about other knowledge.
+It helps the system manage and control knowledge.
+
+Example
+
+An AI system knowing:
+    Which rule should be used first
+
+Real World Examples
+
+When you open Google Maps, it has many types of knowledge:
+
+Road data
+Traffic data
+Distance data
+
+But meta knowledge decides:
+
+If traffic is high → choose another route
+If distance is short → prefer fastest route
+👉 So meta knowledge decides which information is more important.
+
+
+So meta knowledge helps organize other knowledge.
+
+
+⭐ 5️⃣ Structural Knowledge
+Meaning
+
+Structural knowledge describes relationships between concepts.
+It shows how different pieces of knowledge are connected.
+
+Example
+Car → type of Vehicle
+Vehicle → used for Transport
+
+This shows the relationship between concepts.
+
+
+⭐ Simple Comparison Table
+
+| Type        | Meaning                             |
+| ----------- | ----------------------------------- |
+| Declarative | Knowledge about facts               |
+| Procedural  | Knowledge about how to do something |
+| Heuristic   | Experience-based knowledge          |
+| Meta        | Knowledge about knowledge           |
+| Structural  | Knowledge about relationships       |
+
+
+⭐ Simple Diagram
+
+        Types of Knowledge
+              |
+-------------------------------------
+| Declarative | Procedural | Heuristic |
+| Meta        | Structural             |
+-------------------------------------
+
+
+⭐ One-Line Exam Answer
+
+Types of knowledge in AI include declarative, procedural, heuristic, meta, and structural knowledge, which 
+help represent facts, processes, experiences, and relationships.
+      
+      `
+    },
+    {
+      id: 33,
+      question: "33. Explain Semantic Network with example.",
+      answer: "📌 Diagram-based question (high chance).",
+      codeExample: `
+⭐ Semantic Network in Artificial Intelligence
+1️⃣ Meaning
+
+A Semantic Network is a method of representing knowledge in AI using a graph structure.
+It shows objects and their relationships.
+
+📌 Simple definition:
+
+A Semantic Network represents knowledge using nodes (objects) and links (relationships).
+
+
+
+⭐ 2️⃣ Nodes and Links
+
+Nodes
+
+Nodes represent objects, concepts, or entities.
+
+Example:
+
+Animal
+Dog
+Bird
+
+These are nodes in the network.
+
+
+Links
+
+Links represent the relationship between nodes.
+
+Example relationships:
+
+IS-A
+HAS-A
+CAN
+
+Example:
+
+Dog → IS-A → Animal
+
+This means:
+
+Dog is an animal
+
+
+⭐ 3️⃣ Representation of Relationships
+
+Semantic networks show how different concepts are connected.
+
+Example knowledge:
+
+Dog is an Animal
+Animal can move
+Dog has tail
+
+
+Representation:
+
+Dog → IS-A → Animal
+Animal → CAN → Move
+Dog → HAS-A → Tail
+
+So the AI system understands relationships between concepts.
+
+
+⭐ Example
+
+Knowledge:
+
+Bird is an Animal
+Bird can Fly
+Bird has Wings
+
+Semantic representation:
+
+Bird → IS-A → Animal
+Bird → CAN → Fly
+Bird → HAS-A → Wings
+
+
+⭐ Simple Semantic Network Diagram
+
+        Animal
+          |
+        IS-A
+          |
+         Bird
+        /    \\
+     CAN     HAS-A
+      |        |
+      Fly     Wings
+
+Meaning:
+
+Bird is an Animal
+Bird can Fly
+Bird has Wings
+
+
+⭐ Another Simple Example
+
+        Animal
+          |
+        IS-A
+          |
+          Dog
+        /     \\
+     CAN      HAS-A
+      |         |
+     Bark      Tail
+
+
+⭐ Advantages
+
+1️⃣ Easy to understand
+2️⃣ Clearly shows relationships
+3️⃣ Helps AI systems perform reasoning
+
+
+
+⭐ One-Line Exam Answer
+
+A Semantic Network is a knowledge representation technique that uses nodes to represent objects and 
+links to represent relationships between them.
+
+      `
+    },
+    {
+      id: 34,
+      question: "34. Explain Frames in Knowledge Representation.",
+      answer: "📌 Important theory concept.",
+      codeExample: `
+⭐ Frames in Knowledge Representation
+1️⃣ Meaning
+
+A Frame is a structure used in AI to represent knowledge about an object or concept.
+It stores information in the form of attributes and values.
+
+📌 Simple definition:
+
+    A Frame is a data structure used to represent knowledge using slots (attributes) and values.
+
+You can think of a frame like a form or table describing an object.
+
+
+
+⭐ 2️⃣ Frame Structure
+
+A frame contains:
+
+Frame Name (object/concept)
+Slots (attributes)
+Values (information of attributes)
+
+Structure:
+
+Frame Name
+   |
+   |-- Slot → Value
+   |-- Slot → Value
+   |-- Slot → Value
+
+So a frame describes properties of an object.
+
+
+
+⭐ 3️⃣ Slots and Values
+Slots
+
+Slots represent attributes or properties of the object.
+
+Example slots:
+
+Color
+Size
+Food
+
+
+Values
+
+Values store actual information of the slot.
+
+Example:
+
+Color → Brown
+Size → Medium
+Food → Grass
+
+
+
+⭐ Example of Frame
+
+Suppose we represent knowledge about Dog.
+
+Frame: DOG
+
+Slots:
+Animal-Type → Mammal
+Legs → 4
+Sound → Bark
+Food → Meat
+
+Meaning:
+
+Dog is a mammal
+Dog has 4 legs
+Dog makes bark sound
+
+
+
+⭐ Another Example
+
+Frame for Car:
+
+Frame: CAR
+
+Slots:
+Type → Vehicle
+Wheels → 4
+Fuel → Petrol
+Use → Transport
+
+This frame stores knowledge about a car.
+
+
+
+⭐ Simple Diagram
+        Frame : Bird
+        -----------------
+        Type   → Animal
+        Wings  → Yes
+        CanFly → Yes
+        Food   → Seeds
+
+Here:
+
+Bird = Frame
+Type, Wings, CanFly = Slots
+Animal, Yes, Seeds = Values
+
+
+
+⭐ Advantages of Frames
+
+1️⃣ Easy to organize knowledge
+2️⃣ Represents objects clearly
+3️⃣ Helps AI understand relationships and properties
+
+
+⭐ One-Line Exam Answer
+
+Frames are knowledge representation structures in AI that organize information using slots (attributes) 
+and their values.
+      
+      `
+    },
+    {
+      id: 35,
+      question: "35. Explain Conceptual Dependency (CD).",
+      answer: "📌 Sometimes asked as short or medium answer.",
+      codeExample: `
+⭐ Conceptual Dependency (CD) in AI
+
+1️⃣ Meaning
+
+Conceptual Dependency (CD) is a method used in AI to represent the meaning of a sentence.
+It focuses on the action and relationship between objects, not just the words.
+
+📌 Simple definition:
+
+Conceptual Dependency is a knowledge representation technique used to represent the meaning of 
+natural language sentences using actions and relationships.
+
+
+2️⃣ Why Conceptual Dependency is Used
+
+CD helps AI systems to:
+
+Understand natural language
+Represent actions clearly
+Remove confusion between different sentences with the same meaning
+
+Example:
+
+Sentence 1
+👉 Ram gave a book to Shyam.
+
+Sentence 2
+👉 Ram transferred a book to Shyam.
+
+Both sentences have same meaning, so CD represents them in the same structure.
+
+
+
+⭐ Representation of Actions and Relationships
+
+In CD, every sentence is represented using:
+
+1️⃣ Actors (person or object)
+2️⃣ Actions
+3️⃣ Objects
+4️⃣ Relationships
+
+
+
+Example Sentence
+
+👉 Ram gave a book to Shyam
+
+Representation:
+
+Actor → Ram
+Action → Transfer
+Object → Book
+Receiver → Shyam
+
+Meaning:
+
+Ram = person doing action
+Book = object
+Shyam = receiver
+
+⭐ Simple CD Diagram
+
+      Ram
+       |
+   (Transfer)
+       |
+      Book
+       |
+     Shyam
+
+Meaning:
+
+Ram transfers book to Shyam.
+
+
+
+⭐ Another Example
+
+Sentence:
+
+👉 Rita eats an apple
+
+Representation:
+
+Actor → Rita
+Action → Eat
+Object → Apple
+
+Diagram:
+
+Rita
+  |
+ (Eat)
+  |
+Apple
+
+
+
+⭐ Important Idea of CD
+
+CD focuses on concepts, not words.
+
+Example:
+
+"John ate the mango."
+"John consumed the mango."
+
+Both represent same action → Eat, so CD shows same representation.
+
+
+⭐ Advantages of Conceptual Dependency
+
+1️⃣ Helps AI understand sentence meaning
+2️⃣ Removes language differences
+3️⃣ Useful in Natural Language Processing (NLP)
+
+
+⭐ One-Line Exam Answer
+
+Conceptual Dependency is a knowledge representation technique used in AI to represent the meaning of 
+sentences using actions and relationships.
+
+      `
+    },
+    {
+      id: 41,
+      question: "41. What is Prolog?",
       answer: "",
-      codeExample: ``
+      codeExample: `
+⭐ What is Prolog?
+
+1️⃣ Meaning of Prolog
+
+PROLOG stands for:
+
+PRO → Programming
+LOG → Logic
+
+📌 Simple definition:
+
+Prolog is a logic programming language used in Artificial Intelligence to solve problems using facts and rules.
+Instead of writing step-by-step instructions, Prolog works using logical relationships.
+
+
+Example Idea
+
+Suppose we store facts:
+
+male(john).
+female(mary).
+parent(john, bob).
+
+
+Then we can ask a query:
+
+    ?- parent(john, bob).
+
+Prolog will answer:
+
+    Yes
+
+So Prolog works like a question–answer system.
+
+
+
+
+⭐ 2️⃣ Features of Prolog
+
+Important features of Prolog:
+
+1️⃣ Logic Based Language
+
+Prolog is based on mathematical logic.
+
+Programs are written using:
+
+Facts
+Rules
+Queries
+
+Example:
+
+father(X,Y) :- parent(X,Y), male(X).
+
+
+2️⃣ Uses Facts and Rules
+
+Facts = information
+
+Example:
+
+    male(john).
+
+Rules = logical relationship
+
+Example:
+
+    father(X,Y) :- parent(X,Y), male(X).
+
+Meaning:
+
+    If X is parent of Y and X is male, then X is father of Y.
+
+
+3️⃣ Automatic Backtracking
+
+If Prolog cannot find an answer, it automatically searches another solution.
+This process is called backtracking.
+
+
+4️⃣ Pattern Matching
+
+Prolog compares data using pattern matching.
+
+Example:
+
+likes(raj, pizza).
+likes(raj, burger).
+
+Query:
+
+?- likes(raj, X).
+
+Output:
+
+X = pizza
+X = burger
+
+
+5️⃣ Used for AI Problems
+
+Prolog is widely used for solving:
+
+reasoning
+knowledge representation
+expert systems
+
+
+
+
+⭐ 3️⃣ Applications of Prolog in AI
+
+Prolog is used in many AI applications.
+
+
+1️⃣ Expert Systems
+
+Programs that behave like human experts.
+
+Example:
+
+medical diagnosis systems
+
+
+2️⃣ Natural Language Processing (NLP)
+
+Helps computers understand human language.
+
+Example:
+
+chatbots
+language translators
+
+
+3️⃣ Robotics
+
+Used for decision making in robots.
+
+Example:
+
+Robot choosing path or action.
+
+
+4️⃣ Problem Solving
+
+Prolog can solve logical problems like:
+
+Family tree problems
+Tower of Hanoi
+Water Jug problem
+
+
+⭐ Simple Structure of Prolog Program
+
+Prolog Program
+     |
+     |-- Facts
+     |-- Rules
+     |-- Queries
+
+
+⭐ One-Line Exam Definition
+
+Prolog is a logic programming language used in Artificial Intelligence that works using facts, rules, and 
+queries.
+      
+
+-----------------------------------------------------------------
+
+
+?-
+
+is called a Query Prompt.
+
+It means:
+    “Ask Prolog a question.”
+
+Example
+
+Facts in program:
+
+male(john).
+female(mary).
+
+
+Now we ask Prolog a question:
+
+?- male(john).
+
+Here:
+
+?- → asking a question
+male(john) → the question
+
+Prolog checks the facts and answers:
+
+Yes
+
+
+Another Example
+
+likes(raj, pizza).
+likes(raj, burger).
+
+
+Query:
+
+?- likes(raj, X).
+
+
+Meaning:
+
+What does Raj like?
+
+
+Output:
+
+X = pizza
+X = burger
+      
+
+
+
+The symbol
+
+:-
+
+is used to define a rule.
+
+Simple meaning:
+    :- means “IF” or “is true if”
+
+
+⭐ Structure of Rule
+
+Head :- Condition.
+
+Meaning:
+
+Head is true IF Condition is true
+
+
+⭐ Example
+
+father(X,Y) :- parent(X,Y), male(X).
+
+Let’s break it.
+
+father(X,Y) → result
+parent(X,Y), male(X) → conditions
+
+
+Meaning:
+
+X is father of Y IF X is parent of Y AND X is male
+
+
+
+| Symbol | Meaning                    |
+| ------ | -------------------------- |
+| ?-     | Ask question (query)       |
+| :-     | Define rule (IF condition) |
+| .      | End of statement           |
+
+`
+    },
+    {
+      id: 42,
+      question: "42. Explain Prolog Terminology.",
+      answer: "Very common short + theory question.",
+      codeExample: `
+Atom
+Predicate
+Clause
+Constant
+Variable
+Structure
+
+
+⭐ Prolog Terminology
+
+Prolog programs are made using different elements such as atoms, predicates, clauses, constants, variables, 
+and structures.
+
+⭐ 1️⃣ Atom
+Meaning
+
+An Atom is the smallest unit of data in Prolog.
+It represents a name, object, or symbol.
+📌 Usually written in lowercase letters.
+
+
+Example
+
+raj
+apple
+car
+male
+
+These are atoms.
+
+
+
+⭐ 2️⃣ Predicate
+Meaning
+
+A Predicate represents a relationship between objects.
+
+It is written as:
+
+    predicate_name(argument1, argument2)
+
+Example
+
+    likes(raj, pizza).
+    parent(john, mary).
+
+
+Meaning:
+
+    Raj likes pizza
+    John is parent of Mary
+
+
+Here:
+
+likes
+parent
+
+are predicates.
+
+
+
+⭐ 3️⃣ Clause
+Meaning
+
+A Clause is a statement in Prolog.
+
+There are three types:
+
+1️⃣ Facts
+2️⃣ Rules
+3️⃣ Queries
+
+
+Example
+
+Fact:
+
+male(raj).
+
+
+Rule:
+
+father(X,Y) :- parent(X,Y), male(X).
+
+These statements are called clauses.
+
+
+
+⭐ 4️⃣ Constant
+Meaning
+
+A Constant is a fixed value that does not change.
+
+Constants can be:
+
+numbers
+names
+
+Example
+
+raj
+pizza
+10
+car
+
+These values remain unchanged, so they are constants.
+
+
+
+⭐ 5️⃣ Variable
+Meaning
+
+A Variable is used to store unknown values.
+📌 In Prolog, variables start with a capital letter.
+
+
+Example
+
+X
+Y
+Person
+Food
+
+Example query:
+
+likes(raj, X).
+
+Here X can represent pizza, burger, etc.
+
+
+
+⭐ 6️⃣ Structure
+Meaning
+
+A Structure is a complex data object made of multiple parts.
+It is written like a predicate but used to group related data.
+
+
+Example
+person(raj, 21, student)
+
+Meaning:
+
+Name = raj
+Age = 21
+Status = student
+
+Here person(...) is a structure.
+
+
+⭐ Simple Summary Table
+
+| Term      | Meaning                      |
+| --------- | ---------------------------- |
+| Atom      | Smallest unit of data        |
+| Predicate | Relationship between objects |
+| Clause    | Statement in Prolog          |
+| Constant  | Fixed value                  |
+| Variable  | Represents unknown value     |
+| Structure | Group of related data        |
+
+
+
+⭐ Small Program Example
+
+male(raj).
+female(seema).
+parent(raj, rohan).
+
+father(X,Y) :- parent(X,Y), male(X).
+
+Here:
+
+raj → constant
+X,Y → variables
+parent → predicate
+Each statement → clause
+
+
+⭐ One-Line Exam Answer
+
+Prolog terminology includes atoms, predicates, clauses, constants, variables, and structures which are 
+used to build Prolog programs.
+      
+      `
+    },
+    {
+      id: 43,
+      question: "43. Explain Facts, Rules and Queries in Prolog with example.",
+      answer: "",
+      codeExample: `
+⭐ Facts, Rules and Queries in Prolog
+
+A Prolog program mainly contains three parts:
+
+Facts
+Rules
+Queries
+
+These help Prolog store knowledge and answer questions.
+
+
+⭐ 1️⃣ Facts
+Meaning
+
+A Fact is a true statement about something.
+It tells Prolog information that is always true.
+📌 Facts end with a period (.)
+
+Example
+
+father(john, paul).
+male(john).
+
+Meaning:
+
+John is the father of Paul
+John is male
+These are facts stored in the database.
+
+
+
+⭐ 2️⃣ Rules
+Meaning
+
+A Rule tells Prolog how to derive new information from existing facts.
+
+It uses:
+
+Head :- Body.
+
+
+Meaning:
+
+IF Body is true THEN Head is true
+
+Example
+
+parent(X,Y) :- father(X,Y).
+
+Meaning:
+
+If X is father of Y, then X is also parent of Y.
+So Prolog can derive new knowledge.
+
+
+
+⭐ 3️⃣ Queries
+Meaning
+
+A Query is a question asked to Prolog.
+It checks whether something is true or false based on facts and rules.
+
+Queries start with:
+
+?-
+
+
+Example Query
+
+    ?- father(john, paul).
+
+Prolog checks facts and answers:
+
+    Yes
+
+
+⭐ Example Program
+
+father(john, paul).
+parent(X,Y) :- father(X,Y).
+
+Here:
+
+father(john, paul). → Fact
+parent(X,Y) :- father(X,Y). → Rule
+
+
+
+⭐ How Query Works
+
+Now we ask the query:
+
+    ?- parent(john, paul).
+
+Step-by-step:
+
+1️⃣ Prolog looks for parent(john, paul)
+
+
+2️⃣ It finds rule:
+
+parent(X,Y) :- father(X,Y)
+
+
+3️⃣ Now Prolog checks:
+
+father(john, paul)
+
+
+4️⃣ It finds the fact:
+
+father(john, paul).
+
+
+5️⃣ Therefore result is:
+
+Yes
+
+
+⭐ Simple Flow Diagram
+
+Query → parent(john, paul)
+
+        ↓
+
+Check Rule
+parent(X,Y) :- father(X,Y)
+
+        ↓
+
+Check Fact
+father(john, paul)
+
+        ↓
+
+Answer = TRUE
+
+
+⭐ One-Line Exam Answer
+
+In Prolog, facts store true information, rules define relationships between facts, and queries are used to 
+ask questions to the Prolog system.
+      
+      `
+    },
+    {
+      id: 44,
+      question: "44. Explain Backtracking in Prolog.",
+      answer: "📌 Very important exam concept.",
+      codeExample: `
+⭐ Backtracking in Prolog
+1️⃣ Meaning
+
+Backtracking is the search mechanism used by Prolog to find solutions.
+
+When Prolog tries to answer a query:
+
+    It checks facts and rules
+    If one path fails, it goes back and tries another path
+
+📌 Simple definition:
+
+Backtracking is the process where Prolog automatically goes back and tries another possible solution 
+when the current solution fails.
+
+
+
+⭐ 2️⃣ Search Mechanism
+
+Prolog searches answers in this order:
+
+1. Check facts
+2. Apply rules
+3. If solution fails → go back
+4. Try another rule or fact
+
+This going back and trying again is called backtracking.
+
+
+⭐ Example Program
+likes(raj, pizza).
+likes(raj, burger).
+likes(raj, pasta).
+
+
+⭐ Query
+?- likes(raj, X).
+
+
+⭐ How Prolog Finds Solutions
+
+Step 1
+
+Prolog checks the first fact.
+
+likes(raj, pizza)
+
+Result:
+
+X = pizza
+
+
+Step 2 (Backtracking)
+
+If user asks for more solutions, Prolog goes back and checks next fact.
+
+likes(raj, burger)
+
+Result:
+
+X = burger
+
+
+Step 3
+
+Prolog backtracks again.
+
+likes(raj, pasta)
+
+Result:
+
+X = pasta
+
+
+
+⭐ Backtracking Process Diagram
+
+Query → likes(raj, X)
+
+        ↓
+Check Fact 1
+likes(raj, pizza)
+X = pizza
+
+        ↓ (Backtrack)
+
+Check Fact 2
+likes(raj, burger)
+X = burger
+
+        ↓ (Backtrack)
+
+Check Fact 3
+likes(raj, pasta)
+X = pasta
+
+
+
+⭐ Another Example
+
+Program:
+
+male(john).
+male(paul).
+female(mary).
+
+
+Query:
+
+?- male(X).
+
+
+Prolog answers:
+
+X = john
+X = paul
+
+It finds multiple answers using backtracking.
+
+
+
+⭐ Advantages of Backtracking
+
+1️⃣ Automatically searches all possible solutions
+2️⃣ Helps solve complex logical problems
+3️⃣ Useful in AI search problems
+
+
+⭐ One-Line Exam Answer
+
+Backtracking in Prolog is a search mechanism where the system goes back and tries alternative solutions 
+when a previous attempt fails.
+      
+      `
+    },
+    {
+      id: 45,
+      question: "45. Explain Pattern Matching / Unification.",
+      answer: "",
+      codeExample: `
+⭐ Pattern Matching / Unification in Prolog
+
+1️⃣ Meaning
+
+Pattern Matching or Unification is the process where Prolog compares two expressions to see if they 
+match.
+
+If they match, Prolog binds variables with values.
+
+📌 Simple definition:
+
+Unification is the process of matching two terms and assigning values to variables so that the expressions 
+become identical.
+
+
+
+⭐ 2️⃣ Matching Two Expressions
+
+Prolog checks whether two expressions can become equal.
+
+Example expressions:
+
+parent(john, mary)
+parent(X, mary)
+
+Here Prolog compares them.
+
+Result:
+
+X = john
+
+So the expressions match.
+
+
+
+⭐ 3️⃣ Variable Binding
+
+When Prolog finds a match, it assigns a value to the variable.
+This is called variable binding.
+
+Example:
+
+likes(raj, pizza)
+likes(raj, X)
+
+Here:
+
+X = pizza
+
+The variable X gets bound to pizza.
+
+
+⭐ Example Program
+likes(raj, pizza).
+likes(raj, burger).
+likes(seema, pasta).
+
+⭐ Query
+
+?- likes(raj, X).
+
+
+⭐ How Matching Works
+
+Step 1
+Prolog compares:
+
+likes(raj, X)
+likes(raj, pizza)
+
+Match found:
+
+X = pizza
+
+
+Step 2 (Backtracking)
+Prolog checks next fact:
+
+likes(raj, burger)
+
+Match found:
+
+X = burger
+
+
+
+⭐ Matching Diagram
+
+Query → likes(raj, X)
+
+          ↓
+Match with
+likes(raj, pizza)
+
+Result → X = pizza
+
+          ↓
+Backtracking
+
+Match with
+likes(raj, burger)
+
+Result → X = burger
+
+
+
+⭐ Important Rules of Unification
+
+1️⃣ Constants must be same
+2️⃣ Variables can match any value
+3️⃣ Structures must have same name and number of arguments
+
+Example:
+
+parent(john, mary)
+parent(X, Y)
+
+Result:
+
+X = john
+Y = mary
+
+
+⭐ One-Line Exam Answer
+
+Pattern matching or unification in Prolog is the process of matching two expressions and assigning values 
+to variables to make them identical.      
+      
+      `
+    },
+    {
+      id: 46,
+      question: "46. Explain Control Structures in Prolog.",
+      answer: "",
+      codeExample: `
+In Java you use:
+
+if(condition){
+   action
+}
+else{
+   action
+}
+
+In Prolog, we use symbols:
+
+->   (then)
+;    (else)
+
+
+⭐ Control Structures in Prolog
+
+Control structures help Prolog choose actions based on conditions.
+The main control structures are:
+
+1️⃣ If–Then
+2️⃣ If–Then–Else
+
+
+
+⭐ 1️⃣ If – Then
+
+Meaning
+
+If a condition is true, then Prolog performs an action.
+
+Syntax
+(Condition -> Action)
+
+Meaning:
+
+IF condition is true
+THEN do action
+
+Example
+
+Program:
+
+check_age(Age) :-
+    (Age >= 18 -> write('Adult')).
+
+Query:
+
+?- check_age(20).
+
+Output:
+
+Adult
+
+Because 20 ≥ 18, so condition is true.
+
+
+
+⭐ 2️⃣ If – Then – Else
+Meaning
+
+If the condition is true, perform Action1.
+Otherwise perform Action2.
+
+Syntax
+(Condition -> Action1 ; Action2)
+
+Meaning:
+
+IF condition is true
+THEN Action1
+ELSE Action2
+
+
+Example Program
+
+check_number(X) :-
+    (X > 0 -> write('Positive') ; write('Negative')).
+
+Query 1
+
+?- check_number(10).
+
+Output:
+
+Positive
+
+
+Query 2
+
+?- check_number(-5).
+
+Output:
+
+Negative
+
+
+
+⭐ Step-by-Step Working
+
+Query:
+
+?- check_number(10).
+
+Step 1
+Check condition:
+
+10 > 0
+
+
+Step 2
+Condition = true
+
+
+Step 3
+Execute:
+    write('Positive')
+
+
+⭐ Simple Diagram
+
+        Condition
+           |
+     X > 0 ?
+       /   \\
+    Yes     No
+     |       |
+ Positive  Negative
+
+
+ ⭐ One-Line Exam Answer
+
+Control structures in Prolog are used to control program execution using conditions such as If–Then and 
+If–Then–Else.
+      `
+    },
+    {
+      id: 47,
+      question: "47. Explain Cut Operator (!) in Prolog.",
+      answer: "",
+      codeExample: `
+⭐ Cut Operator (!) in Prolog
+1️⃣ Meaning
+
+The Cut operator ! is used to stop Prolog from backtracking.
+When Prolog reaches !, it commits to the current solution and does not try other alternatives.
+
+📌 Simple definition:
+
+Cut (!) is a control operator used to stop backtracking and make Prolog choose the current solution.
+
+
+
+⭐ 2️⃣ Purpose of Cut
+
+Cut is used to:
+
+1️⃣ Stop unnecessary searching
+2️⃣ Improve program efficiency
+3️⃣ Prevent multiple answers
+
+
+
+
+⭐ 3️⃣ How Cut Stops Backtracking
+
+Normally Prolog does this:
+
+Solution 1
+Solution 2
+Solution 3
+
+But with cut !, Prolog stops after the first correct solution.
+
+Solution 1
+STOP
+
+
+⭐ Example Without Cut
+
+Program:
+
+color(red).
+color(blue).
+color(green).
+
+Query:
+
+?- color(X).
+
+Output:
+
+X = red
+X = blue
+X = green
+
+Because Prolog backtracks and finds all solutions.
+
+
+
+⭐ Example With Cut
+
+Program:
+
+color(red) :- !.
+color(blue).
+color(green).
+
+Query:
+
+?- color(X).
+
+Output:
+
+X = red
+
+Explanation:
+
+1️⃣ Prolog finds red
+2️⃣ ! executes
+3️⃣ Backtracking stops
+4️⃣ Other colors not checked
+
+
+
+⭐ Another Example
+
+Program:
+
+max(X,Y,X) :- X >= Y, !.
+max(X,Y,Y).
+
+Meaning:
+
+Find maximum of two numbers.
+
+
+Query
+?- max(10,5,M).
+
+Step 1
+
+10 >= 5  → true
+
+
+Step 2
+
+Cut ! executes → stop searching.
+
+
+Output:
+
+M = 10
+
+Prolog does not check second rule.
+
+
+
+⭐ Simple Diagram
+
+Query → Check Rule
+
+        ↓
+Condition True
+
+        ↓
+        !
+ (Cut operator)
+
+        ↓
+Stop Backtracking
+
+
+⭐ One-Line Exam Answer
+
+The Cut operator (!) in Prolog is used to stop backtracking and force Prolog to accept the current 
+solution.
+      `
     },
     {
       id: 1,

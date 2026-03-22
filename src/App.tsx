@@ -3806,10 +3806,259 @@ solution.
       codeExample: ``
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 11111,
+      question: "Mid paper",
       answer: "",
-      codeExample: ``
+      codeExample: `
+=========================================
+ARTIFICIAL INTELLIGENCE - I
+SOLVED PAPER
+=========================================
+
+
+-----------------------------------------
+Q1 (a) (i)
+Question: List any two applications of AI in real life.
+-----------------------------------------
+
+Answer:
+1. Medical diagnosis (MRI, CT scan analysis)
+2. Chatbots / Virtual assistants
+
+
+-----------------------------------------
+Q1 (a) (ii)
+Question: What is a heuristic function in search algorithms?
+-----------------------------------------
+
+Answer:
+A heuristic function is a function that estimates
+the cost or distance from the current state to
+the goal state to find the solution efficiently.
+
+
+-----------------------------------------
+Q1 (a) (iii)
+Question: What is meant by knowledge representation?
+-----------------------------------------
+
+Answer:
+Knowledge representation is the method of
+representing knowledge in a form that a computer
+can understand and use for reasoning.
+
+
+-----------------------------------------
+Q1 (b) (MCQs)
+-----------------------------------------
+
+1. Which technique reduces the difference between current and goal state?
+
+Answer:
+Means–Ends Analysis
+
+
+2. True or False: Production systems consist of rules and control strategy.
+
+Answer:
+True
+
+
+3. Which knowledge representation technique uses facts and rules?
+
+Answer:
+Production System
+
+
+4. The process of breaking a problem into smaller subproblems is called:
+
+Answer:
+Problem Decomposition
+
+
+5. Which symbol represents logical AND in propositional logic?
+
+Answer:
+∧
+
+
+6. In predicate logic, predicates represent:
+
+Answer:
+Properties or relationships
+
+
+7. Which concept represents inheritance relationships in knowledge representation?
+
+Answer:
+Is-A relationship
+
+
+-----------------------------------------
+Q2 (a) (i)
+Question: Write predicate logic statements.
+-----------------------------------------
+
+Answer:
+
+All humans are mortal:
+∀x (Human(x) → Mortal(x))
+
+Ram is a human:
+Human(Ram)
+
+
+-----------------------------------------
+Q2 (a) (ii)
+Question: What is Generate-and-Test method?
+-----------------------------------------
+
+Answer:
+Generate-and-Test is a problem-solving method
+where possible solutions are generated and tested.
+
+Steps:
+1. Generate possible solution
+2. Test solution
+3. If correct → stop
+4. Else → generate next solution
+
+
+-----------------------------------------
+Q2 (b) (i)
+Question: Explain Hill Climbing and mention one limitation.
+-----------------------------------------
+
+Answer:
+Hill climbing is a heuristic search algorithm
+that continuously moves towards a better state.
+
+Limitation:
+It may get stuck in local maxima.
+
+
+-----------------------------------------
+Q2 (b) (ii)
+Question: Define AI and explain basic elements.
+-----------------------------------------
+
+Answer:
+Artificial Intelligence is the ability of a machine
+to perform tasks that require human intelligence.
+
+Basic elements:
+1. Knowledge base
+2. Inference engine
+3. Learning mechanism
+4. User interface
+
+
+-----------------------------------------
+Q3 (i)
+Question: Explain Production Systems in AI and its components.
+-----------------------------------------
+
+Answer:
+Production system is a rule-based system.
+
+Components:
+1. Rule base (IF–THEN rules)
+2. Working memory (facts)
+3. Control strategy
+
+Working:
+Rules are applied on facts to derive new facts.
+
+
+-----------------------------------------
+Q3 (ii)
+Question: Discuss approaches to knowledge representation.
+-----------------------------------------
+
+Answer:
+1. Logical representation
+2. Semantic networks
+3. Frames
+4. Production rules
+
+
+-----------------------------------------
+Q3 (iii)
+Question: Write a Prolog program using facts and rules.
+-----------------------------------------
+
+Answer:
+
+Facts:
+student(ram).
+student(rahul).
+
+Rules:
+studies(X) :- student(X).
+
+Query:
+?- studies(ram).
+
+Explanation:
+If X is a student, then X studies.
+
+
+-----------------------------------------
+Q4 (a)
+Question: Explain role of AI in modern education.
+-----------------------------------------
+
+Answer:
+1. Personalized learning
+2. Intelligent tutoring systems
+3. Automated grading
+4. Virtual classrooms
+5. Performance analysis
+
+AI improves learning and saves time.
+
+
+-----------------------------------------
+Q4 (b)
+Question: Map Colouring Problem as CSP.
+-----------------------------------------
+
+Answer:
+Variables:
+Regions
+
+Domain:
+Colors (Red, Green, Blue)
+
+Constraints:
+Adjacent regions must have different colors
+
+Goal:
+Assign colors so that no adjacent regions
+have same color.
+
+
+-----------------------------------------
+OR
+-----------------------------------------
+
+Question: Explain Means-Ends Analysis with example.
+-----------------------------------------
+
+Answer:
+Means-Ends Analysis reduces difference between
+current state and goal state.
+
+Steps:
+1. Compare states
+2. Find difference
+3. Apply operator
+4. Repeat
+
+Example:
+Home → College using steps like bus or walking.
+      
+      `
     },
     {
       id: 1,
@@ -3830,7 +4079,7 @@ solution.
       codeExample: ``
     },
     {
-      id: 1111,
+      id: 1.1,
       question: "1. Write a program to implement Tic Tac Toe game.",
       answer: "",
       codeExample: `
@@ -4398,6 +4647,40 @@ No Solution
       `
     },
     {
+      id: 5.5,
+      question: "5. Write a program to implement Tower of Hanoi Problem.",
+      answer: "",
+      codeExample: `
+def tower(n, from_rod, to_rod, aux_rod):
+    if n == 0:
+        return
+    
+    tower(n-1, from_rod, aux_rod, to_rod)
+    
+    print(f"Move disk {n} from {from_rod} to {to_rod}")
+    
+    tower(n-1, aux_rod, to_rod, from_rod)
+
+
+# Main
+n = 3
+tower(n, 'A', 'C', 'B')
+
+
+
+📌 Output for n = 3
+
+Move disk 1 from A to C
+Move disk 2 from A to B
+Move disk 1 from C to B
+Move disk 3 from A to C
+Move disk 1 from B to A
+Move disk 2 from B to C
+Move disk 1 from A to C
+      
+      `
+    },
+    {
       id: 6.6,
       question: "6. Write a prolog program for the family tree.",
       answer: "",
@@ -4498,6 +4781,18 @@ Yes, correct.
 GoodBye!
       
       `
+    },
+    {
+      id: 1,
+      question: "1. ",
+      answer: "",
+      codeExample: ``
+    },
+    {
+      id: 1,
+      question: "1. ",
+      answer: "",
+      codeExample: ``
     },
     {
       id: 1,

@@ -3800,6 +3800,595 @@ solution.
       `
     },
     {
+      id: 51,
+      question: "51. What is an Inference Engine?",
+      answer: "",
+      codeExample: `
+⭐ What is an Inference Engine?
+
+1️⃣ Meaning
+An Inference Engine is the brain of an AI system.
+
+It uses the Knowledge Base (facts + rules) to draw conclusions or make decisions.
+
+📌 Simple Definition:
+An Inference Engine is a component of AI that applies logical rules to the knowledge base to infer new 
+information.
+
+
+🔁 Connection with Concepts
+You studied:
+- Knowledge Base → stores facts & rules
+- Production System → uses IF–THEN rules
+
+👉 Now:
+- Inference Engine → applies those rules
+
+
+⭐ 2️⃣ Role in AI
+
+The Inference Engine performs:
+
+1️⃣ Reasoning  
+   → Uses logic to find answers  
+
+2️⃣ Decision Making  
+   → Chooses the correct action  
+
+3️⃣ Problem Solving  
+   → Finds solutions using rules  
+
+
+Example:
+Knowledge Base:
+IF fever AND cough → flu  
+
+Inference Engine:
+Check symptoms → apply rule → give result  
+
+
+⭐ 3️⃣ How it Works with Knowledge Base
+
+Flow:
+
+Knowledge Base (Facts + Rules)
+            ↓
+     Inference Engine
+            ↓
+        Conclusion
+
+
+Example:
+
+Knowledge Base:
+Fact: fever = yes  
+Fact: cough = yes  
+
+Rule:
+IF fever AND cough → flu  
+
+Working:
+1️⃣ Check facts  
+2️⃣ Match rule  
+3️⃣ Apply rule  
+4️⃣ Output → Result = flu  
+
+
+⭐ 4️⃣ Modes of Inference
+
+There are two main modes:
+
+1️⃣ Forward Chaining  
+2️⃣ Backward Chaining  
+
+
+
+⭐ 4.1 Forward Chaining (Data Driven)
+
+Idea:
+Start from facts → reach conclusion  
+
+📌 "Start from what we know"
+
+Steps:
+Facts → Apply Rules → New Facts → Final Answer  
+
+Example:
+Fact: It is raining  
+Rule: IF raining → take umbrella  
+
+Conclusion:
+Take umbrella  
+
+Memory Trick:
+Forward = Facts → Goal  
+
+
+
+⭐ 4.2 Backward Chaining (Goal Driven)
+
+Idea:
+Start from goal → check facts  
+
+📌 "Start from what we want to prove"
+
+Steps:
+Goal → Check Rule → Check Facts → Answer  
+
+Example:
+
+Goal:
+Is it flu?  
+
+Check rule:
+IF fever AND cough → flu  
+
+Check facts:
+fever = yes ✔  
+cough = yes ✔  
+
+Conclusion:
+Yes, flu  
+
+Memory Trick:
+Backward = Goal → Facts  
+
+
+⭐ Simple Diagram
+
+          Knowledge Base
+        (Facts + Rules)
+                |
+                v
+        Inference Engine
+         /            \\
+ Forward Chaining   Backward Chaining
+ (Facts → Goal)     (Goal → Facts)
+
+
+⭐ One-Line Exam Answer
+
+An Inference Engine is the reasoning component of an AI system that applies rules from the knowledge 
+base to derive conclusions using forward and backward chaining.
+      
+      `
+    },
+    {
+      id: 52,
+      question: "52. Explain Forward Chaining with example.",
+      answer: "📌 Very important long answer.",
+      codeExample: `
+⭐ Forward Chaining in AI
+
+1️⃣ Definition  
+Forward Chaining is an inference method where we start from known facts and apply rules to reach a final 
+conclusion.  
+
+📌 Simple Definition:  
+Forward Chaining is a data-driven approach that starts with facts and applies rules to generate new facts 
+until a goal is reached.  
+
+
+🔁 Connection with Concepts  
+- Facts → stored in Knowledge Base  
+- Rules → IF–THEN  
+- Inference Engine → applies rules  
+
+👉 Forward Chaining = use facts first  
+
+
+⭐ 2️⃣ Data-Driven Approach  
+
+It is called data-driven because:  
+
+👉 Starts from available data (facts)  
+👉 Moves step-by-step toward solution  
+
+📌 Memory Trick:  
+Forward = Facts → Goal  
+
+
+⭐ 3️⃣ Steps of Forward Chaining  
+
+1️⃣ Start with known facts  
+2️⃣ Check rules whose conditions match facts  
+3️⃣ Apply rule → generate new fact  
+4️⃣ Repeat until goal is reached  
+
+
+⭐ 4️⃣ Example  
+
+Knowledge Base  
+
+Facts:  
+fever = yes  
+cough = yes  
+
+Rule:  
+IF fever AND cough → flu  
+
+
+Working  
+
+Step 1:  
+Start with facts → fever, cough  
+
+Step 2:  
+Check rule → IF fever AND cough → flu  
+
+Step 3:  
+Condition is true ✔  
+
+Step 4:  
+Apply rule → New fact = flu  
+
+
+Final Answer:  
+Result = flu  
+
+
+⭐ Simple Flow Diagram  
+
+Facts → Match Rule → Apply Rule → New Fact → Goal  
+
+
+
+⭐ 5️⃣ Properties of Forward Chaining  
+
+1️⃣ Data-driven  
+→ Starts from facts/data  
+
+2️⃣ Bottom-up approach  
+→ Moves from basic facts → final result  
+
+3️⃣ Automatic rule application  
+→ Rules are applied automatically  
+
+4️⃣ Finds all possible solutions  
+→ Can generate multiple conclusions  
+
+
+⭐ Real-Life Example  
+
+Fact: Traffic light = RED  
+Rule: IF red → stop  
+
+Result: STOP  
+
+
+⭐ One-Line Exam Answer  
+
+Forward Chaining is a data-driven inference method that starts from known facts and applies rules to 
+reach a conclusion.
+      
+      `
+    },
+    {
+      id: 53,
+      question: "53. Explain Backward Chaining with example.",
+      answer: "📌 Very common exam question.",
+      codeExample: `
+⭐ Backward Chaining in AI
+
+1️⃣ Definition  
+Backward Chaining is an inference method where we start from the goal (conclusion) and work backward to 
+check if it is true using facts.  
+
+📌 Simple Definition:
+Backward Chaining is a goal-driven approach that starts from the goal and checks rules and facts to 
+prove it.  
+
+
+🔁 Basic Idea  
+
+👉 Instead of starting from facts, we ask:  
+"Is this goal true?"  
+
+Then we check:  
+- Which rule can prove it  
+- Whether required facts are available  
+
+
+
+⭐ 2️⃣ Goal-Driven Approach  
+
+It is called goal-driven because:  
+
+👉 Starts from the goal  
+👉 Moves backward to find supporting facts  
+
+📌 Memory Trick:  
+Backward = Goal → Facts  
+
+
+⭐ 3️⃣ Steps of Backward Chaining  
+
+1️⃣ Start with a goal  
+2️⃣ Find a rule that can prove the goal  
+3️⃣ Check conditions of that rule  
+4️⃣ Verify facts  
+5️⃣ If all conditions are true → goal is true  
+
+
+⭐ 4️⃣ Example  
+
+Knowledge Base  
+
+Facts:  
+fever = yes  
+cough = yes  
+
+Rule:  
+IF fever AND cough → flu  
+
+
+Goal:  
+Is it flu?  
+
+
+Working  
+
+Step 1:  
+Start with goal → flu ?  
+
+Step 2:  
+Find rule → IF fever AND cough → flu  
+
+Step 3:  
+Check conditions:  
+fever = yes ✔  
+cough = yes ✔  
+
+Step 4:  
+All conditions true → Goal achieved  
+
+
+Final Answer:  
+Yes, flu  
+
+
+⭐ Simple Flow Diagram  
+
+Goal → Find Rule → Check Conditions → Verify Facts → Result  
+
+
+
+⭐ 5️⃣ Properties of Backward Chaining  
+
+1️⃣ Goal-driven  
+→ Starts from goal  
+
+2️⃣ Top-down approach  
+→ Moves from goal → facts  
+
+3️⃣ Efficient for specific problems  
+→ Checks only required facts  
+
+4️⃣ Used in expert systems  
+→ Common in diagnosis systems  
+
+
+⭐ Real-Life Example  
+
+Goal: Is student passed?  
+Rule: IF marks ≥ 40 → pass  
+Check: marks = 50 ✔  
+Result: PASS  
+
+
+⭐ One-Line Exam Answer  
+
+Backward Chaining is a goal-driven inference method that starts from the goal and works backward to 
+verify it using rules and facts.
+      
+      `
+    },
+    {
+      id: 54,
+      question: "54. Differentiate between Forward Chaining and Backward Chaining.",
+      answer: "📌 Guaranteed short/medium question.",
+      codeExample: `
+| Point     | Forward Chaining                                              | Backward Chaining                                             |
+| ----------| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| Direction | Bottom-up (Facts → Goal)                                      | Top-down (Goal → Facts)                                       |
+| Approach  | Data-driven                                                   | Goal-driven                                                   |
+| Working   | Starts from known facts and applies rules to reach conclusion | Starts from goal and checks rules to verify it                |
+| Use Cases | When all data is available (e.g., monitoring systems)         | When specific goal is given (e.g., expert systems, diagnosis) |
+
+
+
+| Forward Chaining  | Backward Chaining |
+| ----------------- | ----------------- |
+| Starts from facts | Starts from goal  |
+| Data-driven       | Goal-driven       |
+| Bottom-up         | Top-down          |
+
+      `
+    },
+    {
+      id: 55,
+      question: "55. Explain Horn Clause and Definite Clause.",
+      answer: "📌 Often asked in theory or MCQ.",
+      codeExample: `
+⭐ 1️⃣ Horn Clause
+
+🔹 Definition  
+A Horn Clause is a logical expression that contains at most one positive literal.  
+
+📌 Simple Meaning:  
+A Horn Clause can have one or zero positive statements.  
+
+
+🔹 Forms of Horn Clause  
+
+1️⃣ Fact (only positive)  
+father(john, paul).  
+
+2️⃣ Rule (one positive + conditions)  
+parent(X, Y) :- father(X, Y).  
+
+3️⃣ Goal / Query (no positive literal)  
+?- parent(john, paul).  
+
+
+
+⭐ 2️⃣ Definite Clause
+
+🔹 Definition  
+A Definite Clause is a type of Horn Clause that has exactly one positive literal.  
+
+📌 Simple Meaning:  
+A Definite Clause always has one positive part (called the head).  
+
+
+🔹 Form  
+Head :- Body.  
+
+- Head → positive literal  
+- Body → conditions  
+
+
+🔹 Example  
+father(X, Y) :- parent(X, Y), male(X).  
+
+Here:  
+- father(X, Y) → positive (head)  
+- parent(X, Y), male(X) → conditions  
+
+
+⭐ 3️⃣ Difference Between Horn Clause and Definite Clause  
+
+| Point            | Horn Clause                              | Definite Clause                          |
+| -----------------| ---------------------------------------- | ---------------------------------------- |
+| Definition       | Clause with at most one positive literal | Clause with exactly one positive literal |
+| Positive Literal | 0 or 1                                   | Exactly 1                                |
+| Types            | Fact, Rule, Query                        | Only Fact and Rule                       |
+| Includes Query?  | Yes                                      | No                                       |
+
+
+⭐ Simple Understanding  
+
+Horn Clause = General case (0 or 1 positive)  
+Definite Clause = Special case (exactly 1 positive)  
+
+
+⭐ One-Line Exam Answer  
+
+A Horn Clause is a clause with at most one positive literal, while a Definite Clause is a Horn Clause that 
+contains exactly one positive literal.
+      
+      `
+    },
+    {
+      id: 56,
+      question: "56. Short question and answers.",
+      answer: "",
+      codeExample: `
+⭐ 1️⃣ Modus Ponens
+
+🔹 Meaning  
+Modus Ponens is a basic rule of logical reasoning.  
+
+📌 Simple Definition:  
+If a condition is true and a rule exists, then the conclusion is also true.  
+
+
+🔹 Format  
+IF P → Q  
+P is true  
+-------------  
+Therefore Q is true  
+
+
+🔹 Example  
+IF it is raining → ground is wet  
+It is raining  
+-----------------------  
+Therefore ground is wet  
+
+
+⭐ 2️⃣ Data-Driven vs Goal-Driven  
+
+🔹 Data-Driven (Forward Chaining)  
+- Starts from facts (data)  
+- Moves toward goal  
+- Flow: Facts → Rules → Conclusion  
+
+
+🔹 Goal-Driven (Backward Chaining)  
+- Starts from goal  
+- Checks facts  
+- Flow: Goal → Rules → Facts  
+
+
+🔹 Simple Difference  
+Data-driven → Facts → Goal  
+Goal-driven → Goal → Facts  
+
+
+⭐ 3️⃣ Rule Format (IF–THEN)
+
+🔹 Meaning  
+Rules in AI are written in IF–THEN form.  
+
+📌 Simple Definition:  
+IF condition is true THEN perform action.  
+
+
+🔹 Format  
+IF condition  
+THEN action  
+
+
+🔹 Example  
+IF marks ≥ 40  
+THEN PASS  
+
+
+⭐ 4️⃣ Knowledge Base
+
+🔹 Meaning  
+A Knowledge Base is a collection of:  
+- Facts  
+- Rules  
+
+📌 Simple Definition:  
+A Knowledge Base is the stored information used by AI systems to make decisions.  
+
+
+🔹 Example  
+Fact: fever = yes  
+Fact: cough = yes  
+
+Rule: IF fever AND cough → flu  
+
+
+🔹 Working  
+Knowledge Base → Inference Engine → Result  
+
+
+⭐ One-Line Summary (All Topics)
+
+Modus Ponens → Basic logic rule  
+Data-driven → Facts → Goal  
+Goal-driven → Goal → Facts  
+IF–THEN → Rule format  
+Knowledge Base → Facts + Rules storage  
+      `
+    },
+    {
+      id: 61,
+      question: "61. ",
+      answer: "",
+      codeExample: ``
+    },
+    {
+      id: 1,
+      question: "1. ",
+      answer: "",
+      codeExample: ``
+    },
+    {
       id: 1,
       question: "1. ",
       answer: "",

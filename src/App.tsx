@@ -4378,9 +4378,1251 @@ Knowledge Base → Facts + Rules storage
     },
     {
       id: 61,
-      question: "61. ",
+      question: "61. What is Non-Monotonic Reasoning?",
+      answer: "📌 Core concept of this unit",
+      codeExample: `
+⭐ What is Non-Monotonic Reasoning?
+
+🔹 Definition  
+Non-Monotonic Reasoning is a type of reasoning where conclusions can change when new information 
+is added.  
+
+
+🔹 Simple Meaning  
+Old conclusion → may change → when new fact comes  
+
+👉 Unlike normal logic (monotonic), here results are not fixed  
+
+
+⭐ Why is it Needed? (Real-World Uncertainty)  
+
+In real life, information is often incomplete or uncertain  
+
+📌 So we make assumptions, but later they may be wrong  
+
+
+🔹 Example Situation  
+You assume something is true → later new info changes it  
+
+👉 AI must handle this situation  
+
+
+🔹 Key Idea  
+Real world ≠ always perfect knowledge  
+
+
+
+⭐ Example (Bird → Penguin Case) ⭐  
+
+🔹 Step 1 (Initial Knowledge)  
+
+Rule: Birds can fly  
+Fact: Penguin is a bird  
+-------------------------  
+Conclusion: Penguin can fly ❌  
+
+
+🔹 Step 2 (New Information)  
+New Fact: Penguin cannot fly  
+
+
+🔹 Final Conclusion  
+Penguin cannot fly ✅  
+
+👉 Old conclusion changed  
+
+
+⭐ Simple Diagram  
+
+Bird → Fly (assumption)  
+
+        ↓ new info  
+
+Penguin → Cannot fly (updated conclusion)  
+
+
+⭐ Key Points  
+
+1️⃣ Conclusions can change  
+2️⃣ Works with incomplete knowledge  
+3️⃣ Used in real-world AI systems  
+
+
+⭐ One-Line Exam Answer  
+
+Non-Monotonic Reasoning is a reasoning method where conclusions may change when new information 
+is added, useful in handling real-world uncertainty.  
+
+
+🎯 Easy Memory Trick  
+
+Non-Monotonic = Not fixed answer  
+      `
+    },
+    {
+      id: 62,
+      question: "62. Explain Characteristics of Non-Monotonic Reasoning",
+      answer: "📌 Short + theory question",
+      codeExample: `
+⭐ Characteristics of Non-Monotonic Reasoning  
+
+⭐ 1️⃣ Revisable Conclusions ⭐  
+
+🔹 Meaning  
+Conclusions can be changed or updated when new information is available.  
+
+🔹 Simple Explanation  
+Old conclusion → New information → Updated conclusion  
+
+🔹 Example  
+Birds can fly  
+Penguin is a bird  
+→ Penguin can fly ❌  
+
+New info: Penguin cannot fly  
+→ Conclusion changes ✅  
+
+🔹 Key Point  
+Conclusion is NOT final  
+
+
+⭐ 2️⃣ Default Reasoning  
+
+🔹 Meaning  
+Making assumptions based on general rules, unless exceptions are known.  
+
+🔹 Simple Explanation  
+Assume something is true by default  
+
+🔹 Example  
+Birds usually fly  
+→ Assume any bird can fly  
+
+(But exceptions like penguin exist)  
+
+🔹 Key Point  
+Assume first, correct later  
+
+
+⭐ 3️⃣ Handles Incomplete Knowledge  
+
+🔹 Meaning  
+Works even when full information is not available.  
+
+🔹 Simple Explanation  
+Decision taken even with missing data  
+
+🔹 Example  
+Doctor gives treatment without full test results  
+
+🔹 Key Point  
+Works in real-world uncertainty  
+
+
+⭐ One-Line Summary  
+
+Revisable → Can change  
+Default → Assume  
+Incomplete → Works with less data  
+
+
+⭐ One-Line Exam Answer  
+
+Non-monotonic reasoning is characterized by revisable conclusions, default reasoning, and the ability to 
+handle incomplete knowledge.  
+      `
+    },
+    {
+      id: 63,
+      question: "63. Explain Default Logic",
+      answer: "📌 Most important logic  \n Raymond Reiter",
+      codeExample: `
+⭐ Default Logic (Very Simple)
+
+🔹 Simple Meaning  
+Default Logic means we assume something is true normally,  
+until we get proof that it is wrong.  
+
+
+⭐ Real-Life Example 🧠  
+
+Think like this:  
+
+"Birds can fly"  
+
+👉 So if I say:  
+
+"Parrot is a bird"  
+
+👉 You will say:  
+
+"Parrot can fly"  
+
+✔️ This is default thinking (assumption)  
+
+
+⭐ But Problem Comes ❗  
+
+Penguin is a bird  
+
+👉 By default:  
+Penguin can fly ❌  
+
+But actually:  
+Penguin cannot fly ✅  
+
+👉 So we change our assumption  
+
+
+⭐ Simple Idea  
+
+Assume first → Correct later if needed  
+
+
+⭐ Default Rule Form ⭐  
+
+Default Logic uses a special rule format:  
+
+A : B / C  
+
+
+🔹 Meaning of Symbols  
+
+A → Condition (what we know)  
+B → Justification (assumption)  
+C → Conclusion  
+
+
+🔹 Simple Explanation  
+
+IF A is true  
+AND B is possible (no contradiction)  
+THEN conclude C  
+
+
+⭐ Example (Very Important)  
+
+🔹 Default Rule  
+Bird(x) : Fly(x) / Fly(x)  
+
+
+🔹 Meaning  
+If x is a bird  
+and it is possible that x can fly  
+then conclude x can fly  
+
+
+🔹 Apply Example  
+
+Fact: Penguin is a bird  
+Default: Birds fly  
+----------------------  
+Conclusion: Penguin can fly ❌  
+
+
+🔹 New Information  
+
+Fact: Penguin cannot fly  
+
+
+🔹 Updated Conclusion  
+
+Penguin cannot fly ✅  
+
+👉 Default assumption is rejected  
+
+
+⭐ Simple Diagram  
+
+Bird → (default) Fly  
+
+        ↓ exception  
+
+Penguin → Cannot fly  
+
+
+⭐ Key Points  
+
+1️⃣ Used when knowledge is incomplete  
+2️⃣ Makes assumptions (default)  
+3️⃣ Can change conclusions later  
+
+
+⭐ One-Line Exam Answer  
+
+Default Logic, introduced by Raymond Reiter, is used to make assumptions using rules of the form A : B / C 
+when complete information is not available.  
+
+
+🎯 Easy Memory Trick  
+
+Default Logic = Assume → Check → Update  
+
+
+
+⭐ What if B is wrong?  
+
+🔹 Simple Answer  
+
+If B is wrong (contradicted) → ❌ Do NOT apply the rule → ❌ Do NOT conclude C  
+
+
+⭐ Easy Understanding  
+
+A : B / C  
+
+👉 Means:  
+
+If A is true  
+AND B is not wrong  
+THEN conclude C  
+
+
+🔴 But if B becomes wrong:  
+
+If A is true  
+BUT B is false  
+→ STOP → Do NOT conclude C  
+
+
+⭐ Example (Penguin Case)  
+
+🔹 Default Rule  
+Bird(x) : Fly(x) / Fly(x)  
+
+
+🔹 Case 1 (Normal)  
+
+Parrot is a bird  
+No problem with flying  
+→ Parrot can fly ✅  
+
+
+🔹 Case 2 (B becomes wrong ❗)  
+
+Penguin is a bird  
+But we KNOW penguin cannot fly  
+
+👉 So:  
+
+B = Fly(x) is WRONG ❌  
+
+
+🔹 Final Result  
+
+Do NOT apply rule  
+→ Penguin cannot fly ✅  
+
+
+⭐ Key Idea  
+
+If assumption (B) fails → rule is cancelled  
+
+
+⭐ Super Simple Rule  
+
+B correct → apply rule → get C  
+B wrong → ignore rule → no C  
+
+
+⭐ One-Line Answer  
+
+If B is false or contradicted, the default rule is not applied and the conclusion is rejected.  
+
+
+🎯 Easy Memory Trick  
+
+B wrong → Rule wrong → No conclusion  
+      
+      `
+    },
+    {
+      id: 64,
+      question: "64. Explain Any TWO Logics of Non-Monotonic Reasoning",
+      answer: "📌 Often asked as 'Explain any two' \n Circumscription ⭐ \n Autoepistemic Logic",
+      codeExample: `
+⭐ 1️⃣ Circumscription (Super Easy)
+
+🔹 Think Like This 🧠  
+Assume everything is NORMAL  
+until someone tells you it is SPECIAL  
+
+
+🔹 Example  
+
+You think:  
+All birds can fly  
+
+👉 So you assume:  
+Every bird flies  
+
+
+🔹 Now New Info Comes ❗  
+
+Penguin is a bird  
+
+👉 You still think:  
+Penguin flies ❌  
+
+But then:  
+Penguin cannot fly ✅  
+
+
+🔹 Final Understanding  
+
+First → assume normal (fly)  
+Later → update if exception (penguin)  
+
+
+🔹 One-Line  
+
+👉 Circumscription = "Assume normal, ignore exceptions"  
+
+
+
+⭐ 2️⃣ Autoepistemic Logic  
+
+🔹 Simple Meaning  
+
+Autoepistemic Logic means reasoning based on what we know and what we don’t know.  
+
+
+🔹 Easy Idea  
+
+"If I don't know it is false → I assume it is true"  
+
+
+🔹 Real-Life Example 🧠  
+
+I don't know that Ravi is absent  
+
+👉 So I assume:  
+Ravi is present  
+
+
+🔹 Key Idea  
+
+Knowledge about knowledge  
+
+👉 Thinking about:  
+What I know  
+What I don’t know  
+
+
+🔹 One-Line  
+
+Autoepistemic Logic is reasoning based on self-knowledge (what is known or unknown).  
+
+
+
+⭐ (Optional) 3️⃣ Negation as Failure  
+
+🔹 Simple Meaning  
+
+If something cannot be proven true → assume it is false  
+
+
+🔹 Example  
+
+Cannot prove "Ravi is present"  
+→ So assume Ravi is absent  
+
+
+
+⭐ Quick Difference  
+
+Circumscription → Assume normal world  
+Autoepistemic → Assume based on knowledge  
+
+
+
+⭐ Final Easy Summary  
+
+Circumscription → No exception thinking  
+Autoepistemic → What I know thinking  
+Negation Failure → Not proved = false  
+      
+      `
+    },
+    {
+      id: 65,
+      question: "65. Short questions",
       answer: "",
-      codeExample: ``
+      codeExample: `
+🧠 2 MARK / MCQ (JUST READ)
+
+Non-monotonic → conclusions can change
+Default reasoning → assume true unless false
+Circumscription → minimize abnormal cases
+Negation as failure → assume false if not proven
+      `
+    },
+    {
+      id: 71,
+      question: "71. What is Probabilistic Reasoning?",
+      answer: "📌 Basic + very common question",
+      codeExample: `
+⭐ What is Probabilistic Reasoning?
+
+🔹 Definition  
+Probabilistic Reasoning is a method used in AI to handle uncertainty using probability (chance).  
+
+
+🔹 Simple Meaning  
+Instead of YES or NO → we use chances (%)  
+
+👉 Not sure → we give probability  
+
+
+⭐ Why Needed in AI?  
+
+Real world is not always certain ❗  
+
+AI systems often deal with:  
+- Incomplete data  
+- Uncertain situations  
+- Guessing outcomes  
+
+
+🔹 Example Situation  
+
+Symptoms → not 100% sure disease  
+
+👉 So AI says:  
+80% chance of flu  
+
+
+🔹 Key Idea  
+AI works with chances, not fixed answers  
+
+
+⭐ Real-Life Examples 🧠  
+
+⭐ 1️⃣ Weather Prediction  
+70% chance of rain  
+
+👉 Not sure, but probability is used  
+
+
+⭐ 2️⃣ Medical Diagnosis  
+Fever + cough → 80% flu  
+
+
+⭐ 3️⃣ Spam Email Detection  
+Email → 90% spam  
+
+
+⭐ 4️⃣ Google Search / Recommendations  
+Suggested videos based on probability  
+
+
+⭐ Simple Diagram  
+
+Input Data → Probability → Decision  
+
+
+⭐ Key Points  
+
+1️⃣ Handles uncertainty  
+2️⃣ Uses probability (%)  
+3️⃣ Gives likely results  
+
+
+⭐ One-Line Exam Answer  
+
+Probabilistic Reasoning is a technique in AI that uses probability to make decisions under uncertainty.  
+
+
+🎯 Easy Memory Trick  
+
+Probabilistic = Based on chance  
+      
+      `
+    },
+    {
+      id: 72,
+      question: "72. Explain Conditional Probability.",
+      answer: "📌 Often asked short/medium question",
+      codeExample: `
+⭐ Step 1: Simple Idea  
+
+👉 Conditional probability means:  
+
+We already KNOW something  
+→ then we find probability  
+
+
+⭐ Step 2: Real-Life Example 🧠  
+
+Imagine a class:  
+
+Total students = 10  
+Boys = 6  
+Girls = 4  
+
+👉 Question:  
+
+"What is probability of selecting a BOY?"  
+
+Answer:  
+
+6 / 10 = 0.6  
+
+
+⭐ Step 3: Now CONDITION comes ❗  
+
+👉 New question:  
+
+"IF I tell you the student is a BOY,  
+what is probability that student is a BOY?"  
+
+👉 Now think:  
+
+You already KNOW it's a boy  
+
+So:  
+
+Probability = 1 (100%)  
+
+
+⭐ Another Better Example (Easy)  
+
+Students:  
+
+Boys = 6  
+Among boys, 3 play cricket  
+
+👉 Question:  
+
+IF student is a BOY,  
+what is probability he plays cricket?  
+
+👉 Now we only look at BOYS:  
+
+Total boys = 6  
+Cricket boys = 3  
+
+👉 Answer:  
+
+3 / 6 = 1/2  
+
+
+⭐ Final Understanding 🔥  
+
+Condition means → reduce sample space  
+
+👉 We don’t look at all students  
+👉 Only look at given group (boys)  
+
+
+⭐ Formula (Now Easy)  
+
+P(A | B) = A inside B / Total B
+  
+
+👉 Very simple:  
+
+Required / Given group  
+
+
+⭐ One-Line (Super Easy)  
+
+Conditional probability means finding probability after knowing some information.  
+
+
+🎯 Memory Trick  
+
+First filter → then find probability  
+      `
+    },
+    {
+      id: 73,
+      question: "73. Explain Bayes’ Theorem with formula and example.",
+      answer: "📌 MOST IMPORTANT QUESTION OF THIS UNIT 🔥",
+      codeExample: `
+⭐ Step 1: Think in Simple Words  
+
+👉 Bayes means:  
+
+First guess → then new information → update answer  
+
+
+⭐ Step 2: Real-Life Example 🧠 (VERY EASY)  
+
+🎯 Situation  
+
+In a class:  
+
+Total students = 10  
+Girls = 2  
+Boys = 8  
+
+👉 Also:  
+
+Girls wearing glasses = 2  
+Boys wearing glasses = 2  
+
+
+⭐ Step 3: Question  
+
+A student is wearing glasses  
+→ What is chance the student is a GIRL?  
+
+
+⭐ Step 4: Think Slowly  
+
+👉 First (before knowing glasses):  
+
+Chance of girl = 2 / 10  
+
+👉 This is PRIOR  
+
+
+👉 Now new info:  
+
+Student is wearing glasses  
+
+
+👉 Now only look at students with glasses:  
+
+Total glasses students = 4  
+Girls with glasses = 2  
+
+
+⭐ Final Answer  
+
+Probability = 2 / 4 = 1/2  
+
+
+⭐ Now Understand Terms 🔥  
+
+🔹 Prior (Before)  
+Chance of girl before knowing glasses  
+= 2 / 10  
+
+🔹 Likelihood  
+Chance of wearing glasses if girl  
+= 2 / 2 = 1  
+
+🔹 Posterior ⭐ (After)  
+Chance of girl AFTER knowing glasses  
+= 2 / 4 = 1/2  
+
+
+⭐ Super Simple Idea  
+
+First → look at all students  
+Then → look only at filtered group (glasses)  
+
+
+⭐ Formula (Now Easy)  
+
+P(A | B) = [ P(B | A) × P(A) ] / P(B)
+
+
+👉 Simple meaning:  
+
+Posterior = (Likelihood × Prior) / Total  
+
+👉 But don’t worry about formula
+👉 Just remember filtering idea
+
+
+⭐ One-Line (Very Easy)  
+
+Bayes means update your answer when new information comes.  
+
+
+🎯 Easy Memory Trick  
+
+Before → After  
+Guess → Update  
+
+
+🎯 Final Simple Line  
+
+Bayes = Change answer after new info  
+      
+      `
+    },
+    {
+      id: 74,
+      question: "74. Explain Dempster-Shafer Theory (DST).",
+      answer: "📌 Important theory question",
+      codeExample: `
+⭐ What is Dempster–Shafer Theory (DST)?
+
+🔹 Simple Definition  
+DST is a method used in AI to handle uncertainty when we are not fully sure about information.  
+
+
+🔹 Simple Meaning  
+Not sure → give a range (not exact value)  
+
+👉 Instead of one probability, we give two values  
+
+
+⭐ Basic Idea  
+
+👉 In normal probability:  
+Rain chance = 70%  
+
+👉 In DST:  
+Rain chance = between 60% and 80%  
+
+👉 So DST gives range of belief  
+
+
+
+⭐ Belief & Plausibility ⭐  
+
+
+⭐ 1️⃣ Belief (Lower Bound)  
+
+🔹 Meaning  
+Minimum confidence that something is true  
+
+🔹 Example  
+Belief(rain) = 0.6  
+
+👉 At least 60% sure rain will happen  
+
+
+⭐ 2️⃣ Plausibility (Upper Bound)  
+
+🔹 Meaning  
+Maximum possible confidence  
+
+🔹 Example  
+Plausibility(rain) = 0.8  
+
+👉 At most 80% chance of rain  
+
+
+🔹 Final Range  
+
+0.6 ≤ Rain ≤ 0.8  
+
+
+⭐ Easy Understanding  
+
+Belief → sure part  
+Plausibility → possible part  
+
+
+⭐ Difference from Probability  
+
+| Point     | Probability  | DST                |
+| --------- | ------------ | ------------------ |
+| Value     | Single value | Range (two values) |
+| Certainty | Exact        | Uncertain          |
+| Example   | 70% rain     | 60%–80% rain       |
+
+
+⭐ Real-Life Example 🧠  
+
+Doctor case:  
+
+  Disease chance = 50% to 70%  
+
+👉 Doctor is not fully sure → uses range  
+
+
+⭐ One-Line Exam Answer  
+
+Dempster-Shafer Theory is used to represent uncertainty using belief and plausibility instead of exact 
+probability.  
+
+
+🎯 Easy Memory Trick  
+
+DST = Range, not exact  
+
+
+🎯 Final Summary  
+
+Belief → minimum  
+Plausibility → maximum  
+      `
+    },
+    {
+      id: 75,
+      question: "75. Short question and answers.",
+      answer: "",
+      codeExample: `
+⭐ 1️⃣ 0 ≤ P(A) ≤ 1  
+
+🔹 Meaning  
+Probability value is always between 0 and 1  
+
+🔹 Simple Idea  
+0 → Impossible  
+1 → Certain  
+
+🔹 Example  
+P(rain) = 0 → no rain  
+P(rain) = 1 → sure rain  
+P(rain) = 0.5 → maybe rain  
+
+
+⭐ 2️⃣ P(A) + P(¬A) = 1  
+
+🔹 Meaning  
+Event + Not Event = 1 (100%)  
+
+🔹 Simple Idea  
+Something will either happen OR not happen  
+
+🔹 Example  
+Rain = 0.7  
+No Rain = 0.3  
+
+Total = 1  
+
+
+⭐ 3️⃣ Prior → Before Evidence  
+
+🔹 Meaning  
+Probability before knowing any new information  
+
+🔹 Example  
+Chance of disease = 10% (before test)  
+
+
+⭐ 4️⃣ Posterior → After Evidence ⭐  
+
+🔹 Meaning  
+Probability after getting new information  
+
+🔹 Example  
+Test is positive → New chance = 70%  
+
+
+⭐ 5️⃣ Conditional Probability → P(A | B)  
+
+🔹 Meaning  
+Probability of A when B is already known  
+
+🔹 Simple Idea  
+First condition → then find probability  
+
+🔹 Example  
+Given: student is boy  
+Find: plays cricket  
+
+
+⭐ 6️⃣ Bayes → Update Probability  
+
+🔹 Meaning  
+Bayes theorem is used to update probability using new information  
+
+🔹 Simple Idea  
+Old value → New info → Updated value  
+
+🔹 Example  
+Before test → 10%  
+After test → 70%  
+
+
+⭐ Final Easy Summary  
+
+0 ≤ P ≤ 1 → valid range  
+P(A)+P(not A)=1 → total 100%  
+Prior → before  
+Posterior → after  
+Conditional → given condition  
+Bayes → update answer  
+
+
+🎯 Super Easy Memory Trick  
+
+Before → After → Update  
+      
+      
+      `
+    },
+    {
+      id: 81,
+      question: "81. What is Machine Learning? Explain its features & need.",
+      answer: "📌 Main theory question",
+      codeExample: `
+⭐ What is Machine Learning?
+
+🔹 Definition  
+Machine Learning is a part of AI where machines learn from data and improve automatically without 
+being explicitly programmed.  
+
+
+🔹 Simple Meaning  
+Learning from data → making decisions → improving over time  
+
+👉 No need to write full logic → system learns itself  
+
+
+⭐ Features of Machine Learning  
+
+⭐ 1️⃣ Data-Driven  
+
+🔹 Meaning  
+ML works based on data, not hard-coded rules  
+
+🔹 Example  
+More data → better results  
+
+
+⭐ 2️⃣ Adaptability  
+
+🔹 Meaning  
+ML systems can learn and improve with new data  
+
+🔹 Example  
+YouTube recommendations improve over time  
+
+
+⭐ 3️⃣ Automation  
+
+🔹 Meaning  
+ML reduces human effort by automating tasks  
+
+🔹 Example  
+Spam email detection automatically  
+
+
+⭐ Need of Machine Learning  
+
+⭐ 1️⃣ Handle Large Data  
+
+🔹 Meaning  
+Humans cannot process huge data, but ML can  
+
+🔹 Example  
+Millions of user data analyzed quickly  
+
+
+⭐ 2️⃣ Real-Time Prediction  
+
+🔹 Meaning  
+ML can give instant predictions  
+
+🔹 Example  
+Weather forecast, stock prediction  
+
+
+⭐ Simple Diagram  
+
+Data → Machine Learning → Prediction  
+
+
+⭐ One-Line Exam Answer  
+
+Machine Learning is a technique where systems learn from data, with features like data-driven approach, 
+adaptability, and automation, and is needed for handling large data and real-time predictions.  
+
+
+🎯 Easy Memory Trick  
+
+ML = Learn from Data  
+      
+      `
+    },
+    {
+      id: 82,
+      question: "82. Explain Types of Machine Learning.",
+      answer: "📌 MOST IMPORTANT QUESTION 🔥",
+      codeExample: `
+⭐ First Understand Simple Idea  
+
+Machine Learning = How a machine learns  
+
+👉 There are 3 ways to learn, just like students 👇  
+
+
+⭐ 1️⃣ Supervised Learning ⭐ (Like Teacher)  
+
+🔹 Think Like This 🧠  
+Teacher gives question + answer  
+
+👉 Machine already knows correct answers  
+
+
+🔹 Example  
+Email → Spam or Not Spam (already given)  
+
+👉 Machine learns:  
+If similar email comes → detect spam  
+
+
+🔹 Super Easy Line  
+
+👉 Learn with answer  
+
+
+
+⭐ 2️⃣ Unsupervised Learning (No Teacher)  
+
+🔹 Think Like This 🧠  
+No teacher → student finds patterns himself  
+
+
+🔹 Example  
+Group students by marks automatically  
+
+👉 Machine groups:
+
+Top students  
+Average students  
+Low students  
+
+
+🔹 Super Easy Line  
+
+👉 Find patterns without answer  
+
+
+
+⭐ 3️⃣ Reinforcement Learning (Learning by Reward)  
+
+🔹 Think Like This 🧠  
+Good work → reward  
+Bad work → punishment  
+
+
+🔹 Example  
+Game playing (like chess)  
+
+👉 Machine learns:  
+Good move → +points  
+Bad move → -points  
+
+
+🔹 Super Easy Line  
+
+👉 Learn by reward and punishment  
+
+
+
+⭐ Final Simple Comparison 🔥  
+
+Supervised → Teacher gives answers  
+Unsupervised → No answers, find patterns  
+Reinforcement → Reward & punishment  
+
+
+⭐ Real-Life Memory Trick 🧠  
+
+School:  
+
+Supervised → Teacher teaching  
+Unsupervised → Self study  
+Reinforcement → Marks (reward)  
+
+
+⭐ One-Line Exam Answer  
+
+Supervised learning uses labeled data, unsupervised learning finds patterns without labels, and 
+reinforcement learning learns using rewards and penalties.  
+      
+      `
+    },
+    {
+      id: 83,
+      question: "83. Explain Applications of Machine Learning.",
+      answer: "📌 Easy scoring question",
+      codeExample: `
+⭐ Applications of Machine Learning  
+
+⭐ 1️⃣ Healthcare  
+
+🔹 Use  
+- Disease prediction  
+- Medical diagnosis  
+
+🔹 Example  
+Detect cancer from medical reports  
+
+🔹 Simple Line  
+👉 ML helps doctors find diseases early  
+
+
+
+⭐ 2️⃣ Finance  
+
+🔹 Use  
+- Fraud detection  
+- Credit scoring  
+
+🔹 Example  
+Detect fake credit card transactions  
+
+🔹 Simple Line  
+👉 ML helps secure money and banking  
+
+
+
+⭐ 3️⃣ Retail  
+
+🔹 Use  
+- Product recommendation  
+- Customer analysis  
+
+🔹 Example  
+Amazon suggests products  
+
+🔹 Simple Line  
+👉 ML helps suggest what to buy  
+
+
+
+⭐ 4️⃣ Transportation  
+
+🔹 Use  
+- Self-driving cars  
+- Traffic prediction  
+
+🔹 Example  
+Google Maps shows fastest route  
+
+🔹 Simple Line  
+👉 ML helps smart travel and driving  
+
+
+
+⭐ 5️⃣ Social Media  
+
+🔹 Use  
+- Content recommendation  
+- Face recognition  
+
+🔹 Example  
+Instagram shows posts you like  
+
+🔹 Simple Line  
+👉 ML helps show relevant content  
+
+
+
+⭐ One-Line Exam Answer  
+
+Machine Learning is used in healthcare, finance, retail, transportation, and social media for prediction, 
+automation, and better decision-making.  
+
+
+
+⭐ Easy Memory Trick  
+
+Health → Money → Shopping → Travel → Social  
+      
+
+
+
+2 MARK (JUST READ)
+
+ML = subset of AI
+Training + Prediction
+Supervised → labeled data
+Unsupervised → no labels
+Reinforcement → reward-based
+      `
     },
     {
       id: 1,
@@ -5372,10 +6614,43 @@ GoodBye!
       `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 7.7,
+      question: "7. Write a program to solve N-Queens problem using Prolog.",
       answer: "",
-      codeExample: ``
+      codeExample: `
+:- initialization(main).
+
+main :-
+    N = 4,                          
+    nqueens(N, Solution),
+    write('Solution = '), write(Solution), nl.
+
+% -------- LOGIC --------
+
+nqueens(N, Solution) :-
+    length(Solution, N),
+    place_queens(Solution, N).
+
+place_queens([], _).
+place_queens([Col|Rest], N) :-
+    place_queens(Rest, N),
+    between(1, N, Col),
+    safe(Col, Rest, 1).
+
+safe(_, [], _).
+safe(Col, [C|Rest], Dist) :-
+    Col =\\= C,
+    abs(Col - C) =\\= Dist,
+    Dist1 is Dist + 1,
+    safe(Col, Rest, Dist1).
+
+
+    
+run this ok
+
+?- nqueens(4, Solution).
+      
+      `
     },
     {
       id: 1,

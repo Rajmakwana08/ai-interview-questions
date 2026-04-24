@@ -6653,10 +6653,110 @@ run this ok
       `
     },
     {
-      id: 1,
-      question: "1. ",
+      id: 8.8,
+      question: "8. Write a program to solve 8 puzzle problem using Prolog.",
       answer: "",
-      codeExample: ``
+      codeExample: `
+/* 8 Puzzle Problem */
+
+% -------- GOAL --------
+goal([[1,2,3],
+      [4,5,6],
+      [7,8,0]]).
+
+% -------- MOVES --------
+
+% LEFT
+move([[A,0,C],[D,E,F],[G,H,I]],
+     [[0,A,C],[D,E,F],[G,H,I]]).
+move([[A,B,0],[D,E,F],[G,H,I]],
+     [[A,0,B],[D,E,F],[G,H,I]]).
+
+move([[A,B,C],[D,0,F],[G,H,I]],
+     [[A,B,C],[0,D,F],[G,H,I]]).
+move([[A,B,C],[D,E,0],[G,H,I]],
+     [[A,B,C],[D,0,E],[G,H,I]]).
+
+move([[A,B,C],[D,E,F],[G,0,I]],
+     [[A,B,C],[D,E,F],[0,G,I]]).
+move([[A,B,C],[D,E,F],[G,H,0]],
+     [[A,B,C],[D,E,F],[G,0,H]]).
+
+% RIGHT
+move([[0,B,C],[D,E,F],[G,H,I]],
+     [[B,0,C],[D,E,F],[G,H,I]]).
+move([[A,0,C],[D,E,F],[G,H,I]],
+     [[A,C,0],[D,E,F],[G,H,I]]).
+
+move([[A,B,C],[0,E,F],[G,H,I]],
+     [[A,B,C],[E,0,F],[G,H,I]]).
+move([[A,B,C],[D,0,F],[G,H,I]],
+     [[A,B,C],[D,F,0],[G,H,I]]).
+
+move([[A,B,C],[D,E,F],[0,H,I]],
+     [[A,B,C],[D,E,F],[H,0,I]]).
+move([[A,B,C],[D,E,F],[G,0,I]],
+     [[A,B,C],[D,E,F],[G,I,0]]).
+
+% UP
+move([[A,B,C],[0,E,F],[G,H,I]],
+     [[0,B,C],[A,E,F],[G,H,I]]).
+move([[A,B,C],[D,E,F],[0,H,I]],
+     [[A,B,C],[0,E,F],[D,H,I]]).
+
+move([[A,B,C],[D,0,F],[G,H,I]],
+     [[A,0,C],[D,B,F],[G,H,I]]).
+move([[A,B,C],[D,E,F],[G,0,I]],
+     [[A,B,C],[D,0,F],[G,E,I]]).
+
+% DOWN
+move([[0,B,C],[D,E,F],[G,H,I]],
+     [[D,B,C],[0,E,F],[G,H,I]]).
+move([[A,B,C],[0,E,F],[G,H,I]],
+     [[A,B,C],[G,E,F],[0,H,I]]).
+
+move([[A,0,C],[D,E,F],[G,H,I]],
+     [[A,E,C],[D,0,F],[G,H,I]]).
+move([[A,B,C],[D,0,F],[G,H,I]],
+     [[A,B,C],[D,H,F],[G,0,I]]).
+
+% -------- PRINT --------
+
+print_state([R1,R2,R3]) :-
+    write(R1), nl,
+    write(R2), nl,
+    write(R3), nl, nl.
+
+print_path([]).
+print_path([H|T]) :-
+    print_state(H),
+    write('-----'), nl,
+    print_path(T).
+
+% -------- SOLVE --------
+
+solve(State, Path) :-
+    goal(State),
+    write('Solution Path:'), nl,
+    reverse([State|Path], FinalPath),
+    print_path(FinalPath), !.
+
+solve(State, Path) :-
+    move(State, Next),
+    \\+ member(Next, Path),
+    solve(Next, [State|Path]).
+
+% -------- MAIN --------
+
+:- initialization(main).
+
+main :-
+    Start = [[1,2,3],
+             [4,5,6],
+             [0,7,8]],
+    solve(Start, []).
+      
+      `
     },
     {
       id: 1,
